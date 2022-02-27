@@ -1,0 +1,42 @@
+#!/bin/bash
+
+echo -n "cislo (203) >"
+read REPOCISLO
+echo -n "nazev (tranzistor) >"
+read REPONAME
+echo -n "cely nazev ulohy (Mereni torznim magnetometrem) >"
+read ULOHA
+NPRAKTIKUM="IV"
+echo -n "cislo ulohy (19) >"
+read NULOHA
+JMENO="Vladislav Wohlrath"
+echo -n "datum mereni (10. 10. 2016) >"
+read DATUM
+
+cd ~/git/praktika
+cp -a ./.template/. ./"$REPOCISLO-$REPONAME"
+
+cd "$REPOCISLO-$REPONAME"
+touch "$REPOCISLO-$REPONAME".tex
+
+sed -e "s/NAZEV/Praktikum $NPRAKTIKUM - ($NULOHA) $ULOHA/g" main.tex > sed -e "s/TITLELISTNAME/$REPOCISLO-tit.pdf/g" > "$REPOCISLO-$REPONAME".tex
+rm main.tex
+
+#
+# readme
+#
+
+echo "##Praktikum $NPRAKTIKUM - ($NULOHA) $ULOHA
+
+*$JMENO*
+
+Měřeno: $DATUM
+
+Hodnocení: " > README.md
+
+#
+# titlelist
+#
+#../titlelist_fill.py "graficos/titlelist.pdf" "graficos/$REPOCISLO-tit.pdf" "$NPRAKTIKUM" "$NULOHA" "$ULOHA" "$JMENO" "$DATUM"
+#rm "graficos/titlelist.pdf"
+

@@ -1,0 +1,47 @@
+\section*{Výsledky měření}
+Teplota v místnosti byla $T_0 = \SI{24.0(3)}{\degreeCelsius}$.
+
+Teplotu jsme měřili platinovým odporovým teploměrem.
+Vztah mezi teplotou $t$ ve stupních Celsia a odporem platinového teploměru $R_t$ je
+\begin{equation}
+t=\frac{R_t - R_0}{\alpha_{Pt} R_0} \,,
+\end{equation}
+kde $R_0 = \SI{100}{\ohm}$ je odpor při \SI{0}{\degreeCelsius} a $\alpha_{Pt} = \SI{3.85e-3}{\per\kelvin}$.
+
+Elektrické veličiny (napětí, proud, odpor) jsme měřili multimetrem METEX MXD-4660A.
+Při měření statické charakteristiky jsme hodnoty odečítali přímo z displeje a zapisovali na papír, při měření tepelné závislosti jsme multimetry připojili k počítači.
+
+
+
+Naměřená teplotní závislost je uvedena v přiložené tabulce 1 a zanesena v grafu \ref{g:log}.
+Proložením závislosti jsme určili konstanty $B =\SI{2680(30)}{\kelvin}$ a $R_\infty = \SI{7.0(1)}{\milli\ohm}$.
+Chybu těchto veličin jsme odhadli, přičemž jsme uvážili chybu fitu a chyby fitovaných veličin.
+
+\begin{graph}[htbp] 
+\centering
+\input{logplot.tex}
+\caption{Teplotní závislost odporu}
+\label{g:log}
+\end{graph}
+
+Ze známé konstanty $B$ a vztahů \eqref{e:aktivacni}, \eqref{e:Unamol}, \eqref{e:Tm} a \eqref{e:soucinitel} získáme
+$\Delta U= \SI{0.463(6)}{\electronvolt}$,
+$\Delta U_{mol}=\SI{44.6(5)}{\kilo\joule\per\mole}$,
+$T_m=\SI{340(2)}{\kelvin}$ a
+$\alpha=\SI{-0.0304(5)}{\per\kelvin}$
+(při pokojové teplotě \SI{24.0}{\degreeCelsius}).
+Odchylku těchto veličin jsme počítali metodou přenosu chyb.\cite{prakt}
+
+
+Naměřená statická charakteristika je uvedena v přiložené tabulce 2
+a zanesena do grafu \ref{g:stat}.
+
+\begin{graph}[htbp] 
+\centering
+\input{statplot.tex}
+\caption{Statická charakteristika}
+\label{g:stat}
+\end{graph}
+
+Z grafu jsme určili $U_m = \SI{1.086(5)}{\volt}$ a $I_m=\SI{6.0(3)}{\milli\ampere}$.
+Podle \eqref{e:tepodpor} dostáváme $K=\SI{6600(400)}{\kelvin\per\watt}$.

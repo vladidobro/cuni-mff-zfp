@@ -1,0 +1,28 @@
+\section*{Teoretická část}
+
+Profil svazku budeme měřit štěrbinovým detektorem s posuvným šroubem. Rozložení intenzity proložíme Gaussovou funkcí tvaru $f(x)=A\cdot \exp(-(x-\mu)^2/2\sigma^2)$.
+
+Vlnovou délku budeme měřit pomocí difrakční mřížky.
+Pokud má difrakční mřížka mřížkovou konstantu $a$, stínítko umístíme do vzdálenosti $L$ od mřížky a na stínítku naměříme vzdálenost nultého a prvního maxima $S$, potom vlnová délka laseru je
+\begin{equation} \label{e:vlnovadelka}
+\lambda = \frac{a}{\sqrt{1+\left(\frac{L}{S}\right)^2}} \,.
+\end{equation}
+
+Rozbíhavost svazku charakterizujeme divergencí \cite{div}
+\begin{equation} \label{e:div}
+d=\frac{D-D_0}{s} \,,
+\end{equation}
+kde $D$ je průměr svazku ve vzdálenosti $s$ a $D_0$ je průměr svazku u výstupního otvoru laseru.
+
+Stupeň polarizace definujeme vztahem
+\begin{equation} \label{e:pol}
+Q=\frac{\left|I_{max} - I_{min}\right|}{\left|I_{max}-I_{min}\right|} \,,
+\end{equation}
+kde $I_{max}$ je maximální intenzita po průchodu polarizátorem a $I_{min}$ je minimální.
+
+\subsection*{HeNe laser}
+Stimolavaná emise je jev, při kterém foton dopadající na částici stimuluje přechod excitovaného elektronu do základního stavu, což má za následek vyzáření dalšího fotonu se stejnými vlastnostmi. Aby se stimolavené emise dalo využít k zesílení intenzity světla, je nutná \emph{inverzní populace}, tedy aby více elektronů bylo v excitovaném stavu než v základním stavu. V HeNe laseru se k dosažení inverze využívá proud procházející výbojovou trubicí.
+
+Z obou stran výbojové trubice jsou umístěny zrcadla resonátoru, které zajišťují, aby fotony procházeli trubicí vícekrát a mohlo udržitelně docházet ke stimulované emisi.
+
+Okénka na koncích laserové trubice jsou skloněné vzhledem k optické ose o Brewsterův úhel, aby docházelo k co možná nejmenšímu odrazu. To má za následek, že světlo vycházející z laseru je lineárně polarizované.

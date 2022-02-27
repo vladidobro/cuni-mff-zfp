@@ -1,0 +1,68 @@
+\documentclass[a4paper]{article}
+
+\usepackage[czech]{babel} %https://github.com/michal-h21/biblatex-iso690
+\usepackage[
+   backend=biber      % if we want unicode 
+  ,style=iso-numeric % or iso-numeric for numeric citation method          
+  ,babel=other        % to support multiple languages in bibliography
+  ,sortlocale=cs_CZ   % locale of main language, it is for sorting
+  ,bibencoding=UTF8   % this is necessary only if bibliography file is in different encoding than main document
+]{biblatex}
+
+\usepackage[utf8]{inputenc}
+\usepackage{fancyhdr}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage[left=2cm,right=2cm,top=2.5cm,bottom=2.5cm]{geometry}
+\usepackage{graphicx}
+\usepackage{pdfpages}
+\usepackage{url}
+\usepackage{multirow}
+
+\usepackage{siunitx}
+\sisetup{locale = DE, separate-uncertainty = true} %   kdybych chtel +/-
+
+\usepackage{float}
+\newfloat{graph}{htbp}{grp}
+\floatname{graph}{Graf}
+\newfloat{tabulka}{htbp}{tbl}
+\floatname{tabulka}{Tabulka}
+
+\renewcommand{\thefootnote}{\roman{footnote}}
+
+\pagestyle{fancy}
+\lhead{Praktikum II - (18) Přechodové jevy v RLC obvodu}
+\rhead{Vladislav Wohlrath}
+\author{Vladislav Wohlrath}
+
+\bibliography{source}
+
+\begin{document}
+
+\begin{titlepage}
+\includepdf[pages={1}]{./graficos/titlelist.pdf}
+\end{titlepage}
+
+\section*{Pracovní úkoly}
+\begin{enumerate}
+\item Sestavte obvod podle obr. 1 (viz studijní text k úloze) a změřte pro obvod v periodickém stavu závislost doby kmitu $T$ na velikosti zařazené kapacity alespoň pro pět hodnot z intervalu ($C$=\num{0.1}--\SI{10}{\micro\farad}, $R$ = \SI{20}{\ohm}). Výsledky měření zpracujte graficky a vyhodnoťte velikost indukčnosti $L$ zařazené v obvodu.
+\item Stanovte hodnoty aperiodizačních odporů pro pět hodnot kapacit zařazeného kondenzátoru. I v tomto případě stanovte velikost indukčnosti $L$.
+\item Změřte závislost relaxační doby seriového obvodu RC podle obr. 2 (viz. studnijní text k úloze) na velikosti odporu a na velikosti kapacity v obvodu. Výsledky měření zpracujte graficky a porovnejte s teoretickými.
+\end{enumerate}
+
+%Teoretická část
+\input{teorie.tex}
+
+%Výsledky měření
+\input{vysledky.tex}
+
+%Diskuze výsledků
+\input{diskuze.tex}
+
+%Závěr
+\input{zaver.tex}
+
+
+\printbibliography[title={Seznam použité literatury}]
+
+\end{document}

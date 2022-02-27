@@ -1,0 +1,31 @@
+\section*{Teoretická část}
+Pokud se v sériovém RLC obvodu změní v čase $t=0$ přivedené napětí z nulové hodnoty na hodnotu $\varepsilon$, pak má časový průběh proudu v sériovém RLC obvodu různý charakter v závislosti na hodnotách $R$, $L$ a $C$.
+Označíme
+\begin{equation*}
+A=\frac{R}{2L} \,, \qquad  B^2=\frac{1}{LC} - \frac{R^2}{4L^2} \,.
+\end{equation*}
+
+Potom je průběh proudu podle \cite{skripta}
+\begin{enumerate}
+\item pro $A^2<1/LC$: periodické --- $I(t) = (\varepsilon/BL) \exp(-At) \sin(Bt)$
+\item pro $A^2=1/LC$: mezní aperiodické --- $I(t) = (\varepsilon/L)t \exp(-At)$
+\item pro $A^2>1/LC$: aperiodické --- $I(t) = (\varepsilon/BL) \exp(-At) \sinh(Bt)$
+\end{enumerate}
+
+Při periodickém pohybu odpovídá konstanta $B$ kruhové frekvenci kmitů.
+Pokud platí $1/LC \gg (R/L)^2$, což je v našem případě dobře splněno, můžeme indukčnost $L$ vyjádřit z periody kmitů
+\begin{equation} \label{e:Lper}
+L=\frac{T^2}{4\pi^2 C} \,.
+\end{equation}
+
+Při mezním aperiodickém pohybu můžeme podmínku $A^2=1/LC$ upravit na $R_{ap}=2 \sqrt{L/C}$.
+Pokud tedy správně určíme aperiodizační odpor $R_{ap}$, můžeme vypočítat indukčnost $L$ podle
+\begin{equation} \label{e:Laper}
+L=\frac{R_{ap}^2C}{4} 	,.
+\end{equation}
+
+V sériovém RC obvodu po vypnutí zdroje klesá proud s časem úměrně funkci $\exp(-t/\tau)$, kde
+\begin{equation} \label{e:tau}
+\tau=RC \,,
+\end{equation}
+je \emph{relaxační doba}.

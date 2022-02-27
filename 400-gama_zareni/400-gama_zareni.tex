@@ -1,0 +1,70 @@
+\documentclass[a4paper]{article}
+
+\usepackage[czech]{babel} %https://github.com/michal-h21/biblatex-iso690
+\usepackage[
+   backend=biber      % if we want unicode 
+  ,style=iso-numeric % or iso-numeric for numeric citation method          
+  ,babel=other        % to support multiple languages in bibliography
+  ,sortlocale=cs_CZ   % locale of main language, it is for sorting
+  ,bibencoding=UTF8   % this is necessary only if bibliography file is in different encoding than main document
+]{biblatex}
+
+\usepackage[utf8]{inputenc}
+\usepackage{fancyhdr}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage[left=2cm,right=2cm,top=2.5cm,bottom=2.5cm]{geometry}
+\usepackage{graphicx}
+\usepackage{pdfpages}
+\usepackage{url}
+
+\usepackage{siunitx}
+\sisetup{locale = DE}  %, separate-uncertainty = true    kdybych chtel +/-
+
+\usepackage{float}
+\newfloat{graph}{htbp}{grp}
+\floatname{graph}{Graf}
+\newfloat{tabulka}{htbp}{tbl}
+\floatname{tabulka}{Tabulka}
+
+\renewcommand{\thefootnote}{\roman{footnote}}
+\newcommand{\pr}[2]{$^{\num{#1}}$#2}
+\newcommand{\kev}[1]{\SI{#1}{\keV}}
+\newcommand{\peak}[3]{($\num{#1}\pm\num{#2}^{\text{stat}}\pm\num{#3}^{\text{sys}}$)\si{\keV}}
+\newcommand{\rozmezi}[2]{\num{#1}--\kev{#2}}
+\newcommand{\fw}[1]{($\text{FWHM}=\kev{#1}$)}
+
+\pagestyle{fancy}
+\lhead{Praktikum IV - (A0) Studium spekter záření gama polovodičovým spektrometrem}
+\rhead{Vladislav Wohlrath}
+\author{Vladislav Wohlrath}
+
+\bibliography{source}
+
+\begin{document}
+
+\begin{titlepage}
+\includepdf[pages={1}]{./graficos/titlelist.pdf}
+\end{titlepage}
+
+\section*{Pracovní úkoly}
+\begin{enumerate}
+\item Cílem studované úlohy je seznámit posluchače s vlastnostmi spekter gama záření získaných polovodičovým spektrometrem. Měření je prováděno se zářiči s jednoduchým spektrem gama záření:  \pr{137}{Cs} ($E\gamma = \kev{661.66}$) a \pr{24}{Na} ($E\gamma = \num{1368.63}$ a {\kev{2754.03}}).
+\end{enumerate}
+
+%Teoretická část
+\input{teorie.tex}
+
+%Výsledky měření
+\input{vysledky.tex}
+
+%Diskuze výsledků
+\input{diskuze.tex}
+
+%Závěr
+\input{zaver.tex}
+
+
+\printbibliography[title={Seznam použité literatury}]
+
+\end{document}

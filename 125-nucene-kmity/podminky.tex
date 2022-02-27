@@ -1,0 +1,35 @@
+\section*{Podmínky, pomůcky a měřící přístroje}
+Měření proběhlo při pokojové teplotě (přibližně \SI{25}{\degreeCelsius}) a normálním atmosférickém tlaku.
+
+Jako oscilátor jsme použili permanentní magnet zavěšený na pružině.
+
+
+Pod magnetem byla umístěna cívka připojená k počítači, který nám umožňoval do ní pouštět střídavé napětí o zvolené frekvenci a také zobrazovat časový průběh napětí indukované magnetem.
+
+
+Indukované napětí by mělo být přibližně přímo úměrné okamžité rychlosti magnetu.
+Periodu kmitu můžeme odečíst podle časové vzdálenosti jednotlivých peaků napětí.
+
+
+Měřili jsme maximální napětí při pohybu magnetu nahoru i dolů.
+Při pohybu dolů bylo napětí většinou výrazně vyšší (viz graf \ref{grp::mericipristroje}), takže předpokládáme, že měřící přístroj byl zatížen systematickou chybou.
+Při měření konstanty tlumení se tuto chybu pokusíme odstranit tím, že u souboru naměřených peaků napětí nejdříve určíme střed jako průměr nulových a nenulových hodnot.
+Dále vezmeme vzdálenost všech bodů od této hodnoty a až 
+tento soubor hodnot prokládáme exponenciálou.
+
+\begin{graph}[htbp] 
+\centering
+\input{tlumpuvodni.tex}
+\caption{Naměřené hodnoty při kmitání tlumeném modrým diskem, graf ilustruje způsob zpracování}
+\label{grp::mericipristroje}
+\end{graph}
+
+Soustava nebyla kalibrovaná k měření výchylky, takže amplitudy u nuceného kmitání uvádíme pouze v poměru k nejvyšší naměřené hodnotě.
+Při pohybu dolů bylo napětí opět vyšší, relativní velikost výchylky určíme jako rozdíl průměru kladných maxim a průměru záporných maxim (viz graf \ref{grp::nucenyilustrace}).
+
+\begin{graph}[htbp] 
+\centering
+\input{nucenyilustrace.tex}
+\caption{Ilustrace metody určení amplitudy při nucených kmitech, poměrnou amplitudu určíme jako vzdálenost dvou čárkovaných přímek}
+\label{grp::nucenyilustrace}
+\end{graph}

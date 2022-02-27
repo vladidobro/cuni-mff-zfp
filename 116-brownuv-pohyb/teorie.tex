@@ -1,0 +1,41 @@
+\section*{Teoretická část}
+Budeme mikroskopem pozorovat pohyb částic latexu ve vodě.
+Pokud budeme zaznamenávat pouze průmět polohy částice do roviny, platí pro střední kvadratické posunutí $\overline{s^2}$ za čas $t$ vztah \cite{skripta}
+\begin{equation} \label{eq::drahaaktivita}
+\overline{s^2}=2 \cdot A \cdot t \,,
+\end{equation}
+kde $A$ je tzv. aktivita Brownova pohybu.
+Pro kulové částice o poloměru $r$ v prostředí s teplotou $T$ a dynamickou viskozitou $\eta$ platí \cite{skripta}
+\begin{equation} \label{eq::aktivitavzorec}
+A=\frac{RT}{3 \pi \eta r N_A} \,,
+\end{equation}
+kde $R=~\SI{8.314}{\joule \per \mole \per \kelvin}$ je molární plynová konstanta a $N_A$ je Avogadrova konstanta.
+
+Ze vztahu \eqref{eq::drahaaktivita} je zřejmé, že když budeme zaznamenávat dráhy částic za čas $t$, $2t$, $3t$ a $4t$, bude pro $s_t$, $s_{2t}$, $s_{3t}$ a $s_{4t}$ platit
+\begin{equation} \label{eq::pomerdrah1234}
+\overline{s_t^2}:\overline{s_{2t}^2}:\overline{s_{3t}^2}:\overline{s_{4t}^2} = 1:2:3:4 \,.
+\end{equation}
+
+Pokud naměřená data budou splňovat tuto podmínku, použijeme naměřené střední kvadratické posunutí $\overline{s_t^2}$ k výpočtu aktivity $A$ a následně Avogadrovy konstanty $N_A$ úpravou vztahu \eqref{eq::aktivitavzorec}
+\begin{equation} \label{eq::A}
+A=\frac{\overline{s^2}}{2 \cdot t}
+\end{equation}
+\begin{equation} \label{eq::NA}
+N_A=\frac{2RTt}{3\pi \eta r \overline{s^2}}
+\end{equation}
+a odchylku metodou přenosu chyb
+\begin{equation} \label{eq::chybaA}
+\sigma_A = A \sqrt{
+\left( \frac{\sigma_{\overline{s^2}}}{\overline{s^2}}  \right)^2 +
+\left( \frac{\sigma_t}{t}    \right)^2
+}
+\end{equation}
+\begin{equation} \label{eq::chybaNA}
+\sigma_{N_A}=N_A \sqrt{
+\left( \frac{\sigma_T}{T} \right)^2  +
+\left( \frac{\sigma_t}{t} \right)^2  +
+\left( \frac{\sigma_\eta}{\eta} \right)^2  +
+\left( \frac{\sigma_r}{r} \right)^2  +
+\left( \frac{\sigma_{\overline{s^2}}}{\overline{s^2}} \right)^2
+} \,.
+\end{equation}

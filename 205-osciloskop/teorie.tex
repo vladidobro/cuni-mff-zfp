@@ -1,0 +1,35 @@
+\section*{Teoretická část}
+Pro střídavé napětí harmonického průběhu platí vztah mezi špičkovým napětím $U_0$ a efektivním napětím $U_{ef}$
+\begin{equation} \label{e:efektivni}
+U_{ef}=\frac{U_0}{\sqrt{2}} \,.
+\end{equation}
+
+Budeme měřit jednocestný usměrňovač. \cite{skripta}
+Střední hodnota $U_e$ jednocestně usměrněného napětí je \cite{skripta}
+\begin{equation}
+U_e=\frac{U_0}{\pi} \,.
+\end{equation}
+
+Při zapojení pro úkol 2. (b) by napětí mezi jednotlivými pulzy mělo mít přibližný průběh \cite{skripta}
+\begin{equation}
+u \approxeq U_0 \left( 1 - \frac{t}{\tau}  \right) \,,
+\end{equation}
+kde
+\begin{equation}
+\tau = R_z C 
+\end{equation}
+je časová konstanta vybíjení.
+
+Definujeme činitel filtrace
+\begin{equation}
+k_f = \frac{U_0}{\Delta U} \approxeq \frac{\tau}{T} \,,
+\end{equation}
+kde $T$ je doba mezi pulzy.
+
+Pro kapacitu $C$ platí vztah \cite{skripta}
+\begin{equation}
+C=\frac{T k_f I_{SS}}{U_0} \,,
+\end{equation}
+kde $I_{SS}$ je proud zátěží.
+
+Pokud tedy budeme udržovat činitel filtrace konstantí, měla by kapacita být přímo úměrná proudu $I_{SS}$, a $\tau$ by mělo být konstantní.

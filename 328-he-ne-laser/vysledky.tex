@@ -1,0 +1,32 @@
+\section*{Výsledky měření}
+
+Změřili jsme závislost relativního výkonu laseru na velikosti proudu procházejícím výbojovou trubicí. Naměřené hodnoty jsou v tabulce \ref{t:proud} a grafu \ref{g:proud}. Závislost je v měřeném rozsahu rostoucí. Standardní chybu měření proudu odhadujeme \SI{0.01}{\mA} a intenzity \num{1}.
+
+
+Změřili jsme profil svazku. Naměřená intenzita pro různé polohy štěrbiny detektoru je uvedena v tabulce \ref{t:profil}. Závislost jsme v programu \emph{gnuplot} proložili Gaussovou funkcí a vykreslili do grafu \ref{g:profil}. Náhodnou chybu určení souřadnice $x$ odhadujeme na \SI{0.01}{\mm}. Výsledné parametry jsou
+\begin{equation*}
+\begin{array}{ccc}
+A=\num{85.5(20)} \qquad \qquad \mu = \SI{16.16(1)}{\mm} \qquad \qquad \sigma = \SI{0.44(2)}{\mm}
+\end{array}
+\end{equation*}
+
+Při měření vlnové délky jsme použili difrakční mřížku s mřížkovou konstantou $a=\SI{1}{\micro\metre}$ a stínítko jsme umístili do vzdálenosti $L=\SI{45.5(2)}{\cm}$ od mřížky.
+ Vzdálenost nultého a prvního maxima na stínítku jsme změřili $S=\SI{37.0(5)}{\cm}$.
+Předpokládáme, že chyba určení mřížkové konstanty je zanedbatelná oproti chybě měřených vzdáleností. Ze vztahu \eqref{e:vlnovadelka} a metodou přenosu chyb dostáváme vlnovou délku laseru 
+\begin{equation*}
+\lambda=\SI{631(7)}{\nm} \,.
+\end{equation*}
+
+Při měření divergence jsme pro měření průměru svazku použili měřič profilu svazku. Odečítali jsme hodnoty \emph{beam width clip} a \emph{gaussian diameter}. V největší měřené vzdálenosti již přístroj z nějakého důvodu nedokázal určit \emph{beam width clip}, z toho důvodu jsme ve vzorci \eqref{e:div} jako průměr svazku $D$ použili hodnotu \emph{gaussian diameter} (tam, kde přístroj dokázal určit obě hodnoty, se tyto přibližně shodují). Vzhledem k oscilaci hodnot a jejich rozdílu ve směrech x a y odhadujeme chybu průměru svazku na \SI{50}{\micro\metre}.
+Naměřené hodnoty jsou v tabulce \ref{t:div} a grafu \ref{g:div}. Divergenci jsme určili lineárním fitem v programu \emph{gnuplot} jako 
+\begin{equation*}
+d=\num{1.25(10)e-3} \,.
+\end{equation*}
+
+Při měření stupně polarizace jsme relativní intenzitu měřili digitálním wattmetrem. Naměřená minima a maxima intenzity odpovídající osmi polohám polarizátoru jsou uvedena v tabulce \ref{t:pol}. Chybu relativní intenzity maxim odhadujeme na \num{20} a minim na \num{1}. Stupeň polarizace jsme určili podle \eqref{e:pol} jako
+\begin{equation*}
+Q=\SI{98.1(5)}{\percent} \,.
+\end{equation*}
+
+
+\input{floats.tex}

@@ -1,0 +1,37 @@
+\section*{Výsledky měření}
+Teplota v místnosti (vzorku) byla $T =\SI{299(1)}{\kelvin}$.
+
+Dynamickou viskozitu vody při této teplotě uvádí \cite{viskozita} $\eta=\SI{0.87(3)}{\milli\pascal\s}$.
+Podle \cite{skripta} lze relativní viskozitu suspenze částic latexu ve vodě odhadnout jako
+\begin{equation}
+\eta _{rel} = 1 + \num{2.5}\varphi \,,
+\end{equation}
+kde $\varphi$ je objemový podíl částic.
+Vzhledem k tomu, že latex byl zředěn v poměru $1:\num{10000}$, tak dynamickou viskozitu suspenze považujeme za stejnou jako čisté vody.
+
+Poloměr částic latexu jsme určili podle fotografie z elektronového mikroskopu (viz příloha 1).
+Změřili jsme průměr \num{35} částic.
+V částicích, které měřeny byly, je na obrázku vepsán jejich průměr v mikrometrech. 
+Průměr jsme měřili pravítkem a směrodatnou odchylku odhadujeme na \SI{0.5}{\mm}, po přepočtu v měřítku $\Delta d =\SI{0.008}{\micro\metre}$.
+
+Spočítáme směrodatnou odchylku výběrového souboru
+\begin{equation}
+S_d=\sqrt{  \frac{1}{34} \sum_{\substack{i=1}}^{35} (d_i - \overline{d})^2} = \SI{0.042}{\micro\metre}
+\end{equation}
+a připočteme odchylku způsobenou nepřesností měření
+\begin{equation}
+\sigma_d=\sqrt{  S_d^2 + \Delta d^2}=\SI{0.044}{\micro\metre} \,.
+\end{equation}
+
+Průměr částic jsme tedy určili $d=\SI{0.41(5)}{\micro\metre}$ a poloměr po vydělení dvěma $r=\SI{0.205(22)}{\micro\metre}$.
+
+Polohu částic jsme zaznamenávali v pravidelných časových intervalech $t=\SI{4.804(3)}{\s}$.
+
+Zaznamenali jsme pohyb celkem \num{8} částic, přikládáme tři nejpovedenější (číslo měření 1, 3 a 8).
+Střední kvadratické dráhy jsme počítali pomocí programu \emph{Brown}.
+
+Nejlepší shodu s \eqref{eq::pomerdrah1234} vykazovalo měření číslo 8 --- střední kvadratické posunutí $\overline{s^2}=\SI{18(2)}{\micro\metre\squared}$.
+
+Podle \eqref{eq::A} a \eqref{eq::chybaA} vypočteme aktivitu Brownova pohybu $A=\SI{1.87(21)}{\micro\metre\squared\per\s}$.
+
+Podle \eqref{eq::NA} a \eqref{eq::chybaNA} vypočteme Avogadrovu konstantu $N_A=(7,9 \pm 1,3) \times 10^{23} \,\si{\per\mole}$.

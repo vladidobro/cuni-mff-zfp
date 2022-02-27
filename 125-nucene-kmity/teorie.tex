@@ -1,0 +1,47 @@
+\section*{Teoretická část}
+
+Budeme pozorovat pohyb harmonického oscilátoru (závaží zavěšené na pružině) ve třech případech: oscilátor kmitá sám a jeho tlumení je zanedbatelné, oscilátor je tlumený, na tlumený oscilátor působí periodická vnější síla
+
+V případě, že oscilátor není tlumený, kmitá s kruhovou frekvencí $\omega$.
+
+Působí-li na harmonický oscilátor působit síla úměrná rychlosti pohybu, má jeho pohybová rovnice tvar
+\begin{equation} \label{eq::pohybovarovnicetlumeny}
+\ddot{y}+2\delta \dot{y}+\omega^2y=0 \,,
+\end{equation}
+kde $y$ je výchylka tělesa a $\delta$ je tzv. konstanta tlumení.
+
+Pro slabou tlumící sílu ($\delta<\omega$) je řešením rovnice \eqref{eq::pohybovarovnicetlumeny}
+\begin{equation}
+y= A\cdot e^{-\delta t} \cdot \sin(\omega_1t+\varphi_0) \,,
+\end{equation}
+kde $A$ a $\varphi_0$ jsou integrační konstanty a $\omega_1$ je kruhová frekvence tlumeného oscilátoru, platí \cite{skripta}
+\begin{equation} \label{eq::omega1}
+\omega_1^2 = \omega^2 - \delta^2 \,.
+\end{equation}
+
+Pokud budeme na oscilátor působit periodickou vnější silou s harmonickým průběhem a kruhovou frekvencí~$\Omega$, bude mít rovnice \eqref{eq::pohybovarovnicetlumeny} tvar
+\begin{equation}
+\ddot{y} + 2\delta \dot{y} + \omega^2 y = \frac{F_0}{m}\cdot \sin(\Omega t) \,,
+\end{equation}
+kde $F_0$ je maximální působící síla a $m$ je hmotnost oscilátoru.
+Řešení má tvar \cite{skripta}
+\begin{equation} \label{eq::reseninuceny}
+y=A \cdot e^{-\delta t} \cdot \sin (\omega_1 t+ \varphi_0) + A_v \cdot \sin (\Omega t + \gamma) \,,
+\end{equation}
+kde $A$ a $\varphi_0$ jsou integrační konstanty, $A_v$ a $\gamma$ jsou konstanty: \cite{skripta}
+\begin{equation}
+A_v=\frac{F_0}{m \omega^2} \frac{1}{\sqrt{
+\left( 1- (\Omega/\omega)^2  \right)^2 +
+4 (\delta/\omega)^2(\Omega/\omega)^2
+}} 
+\end{equation}
+\begin{equation}
+tan (\gamma) =- \frac{2\delta}{\omega}\cdot \frac{\Omega/\omega}{1-(\Omega/\omega)^2} \,.
+\end{equation}
+
+Po určité době (zakmitávací) vliv počátečních podmínek vymizí a v \eqref{eq::reseninuceny} zbyde jen druhý člen.
+
+Amplutuda $A_v$ nabývá maxima při kruhové frekvenci vnější síly
+\begin{equation} \label{eq::resomega}
+\Omega_{res}^2 = \omega^2-2\delta^2 \,.
+\end{equation}

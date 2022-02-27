@@ -1,0 +1,48 @@
+\section*{Teoretická část}
+Dynamickou vikozitu kapaliny $\eta$ můžeme definovat vztahem \cite{skripta}
+\begin{equation}
+\tau = \eta \cdot D \,,
+\end{equation}
+kde $\tau$ je smykové napětí a $D$ je rychlost smykové deformace.
+
+Pokud je $\eta$ konstanta a nezívisí na rychlosti deformace, nazýváme kapalinu newtonovskou.
+Pokud $\eta$ na rychlosti závisí, mluvíme o zdánlivé viskozitě a kapalinu nazýváme nenewtonovskou.
+Pro některé nenewtonovské kapaliny platí mocninný zákon \cite{skripta}
+\begin{equation} \label{eq::fitnenewton}
+\eta = m \cdot D^{n-1} \,,
+\end{equation}
+kde $m$ je konstanta a $n$ je číslo.
+
+Změnu viskozity s teplotou můžeme charakterizovat vztahem \cite{skripta}
+\begin{equation}
+\eta(T) = C \cdot \exp(\frac{\epsilon_A}{kT}) \,,
+\end{equation}
+kde $C$ je konstanta, $\epsilon_A$ je aktivační energie, $k$ je Boltzmannova konstanta a $T$ je termodynamická teplota.
+Po zlogaritmování dostaneme
+\begin{equation} \label{eq::primka}
+\ln(\eta) = \ln(C) + \frac{\epsilon_A}{k} \cdot \frac{1}{T} \,,
+\end{equation}
+tedy rovnici přímky v proměnných $\ln{\eta}$ a $1/T$.
+
+Viskozitu budeme měřit rotačním a kuličkovým viskozimetrem značky HAAKE.
+
+Rotační viskozimetr je vybaven čtyřmi rotory různé velikosti ozančenými \emph{L1}, \emph{L2}, \emph{L3} a \emph{L4} a umožňuje volit frekvenci otáčení.
+
+V kuličkovém viskozimetru měříme čas $t$, za který kulička ve viskózní kapalině urazí vzdálenost \SI{100}{\mm}.
+Kuličkový viskozimetr je připojen k přístroji, který umožňuje nastavit teplotu kapaliny.
+Viskozitu určíme ze změřeného času $t$ pomocí vztahu \cite{skripta}
+\begin{equation} \label{eq::teplotavypocet}
+\eta = K \cdot (\rho_1 - \rho_2) \cdot t \,,
+\end{equation}
+kde $\rho_1$ je hustota kuličky, $\rho_2$ hustota kapaliny a $K$ je konstanta kuličky.
+Byla použita ocelová kulička o hmotnosti \SI{14.92}{\g}, průměru \SI{15.19}{mm} a hustotě $\rho_1 = $\SI{8.127}{\g\per\cm\cubed}.
+Pro takovou kuličku uvádí \cite{skripta} konstantu kuličky \mbox{$K = \SI{0.7061}{\milli\Pa\per\cm\cubed\per\g}$}.
+
+Viskozita glycerinu je silně závislá na složení a v rotačním viskozimetru neměříme čistý glycerin.
+Jeho koncentraci změříme pyknometrickou metodou \cite{pyknometr}.
+Změříme hmotnost prázdného pyknometru $m_1$, hmotnost pyknometru naplněného vodou (o známé hustotě) $m_2$ a hmotnost pyknometru naplněného glycerinem $m_3$.
+Hustotu glycerinu určíme podle vztahu \cite{skripta}
+\begin{equation} \label{eq::pyknometr}
+\rho_{glycerin} = \frac{m_3 - m_1}{m_2 - m_1} \cdot (\rho_{voda} - \sigma) + \sigma \,,
+\end{equation}
+kde $\sigma$ je hustota vzduchu.

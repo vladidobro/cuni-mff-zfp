@@ -1,0 +1,68 @@
+\documentclass[a4paper]{article}
+
+\usepackage[czech]{babel} %https://github.com/michal-h21/biblatex-iso690
+\usepackage[
+   backend=biber      % if we want unicode 
+  ,style=iso-numeric % or iso-numeric for numeric citation method          
+  ,babel=other        % to support multiple languages in bibliography
+  ,sortlocale=cs_CZ   % locale of main language, it is for sorting
+  ,bibencoding=UTF8   % this is necessary only if bibliography file is in different encoding than main document
+]{biblatex}
+
+\usepackage[utf8]{inputenc}
+\usepackage{fancyhdr}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage[left=2cm,right=2cm,top=2.5cm,bottom=2.5cm]{geometry}
+\usepackage{graphicx}
+\usepackage{pdfpages}
+\usepackage{url}
+
+\usepackage{siunitx}
+\sisetup{locale = DE}  %, separate-uncertainty = true    kdybych chtel +/-
+
+\usepackage{float}
+\newfloat{graph}{htbp}{grp}
+\floatname{graph}{Graf}
+\newfloat{tabulka}{htbp}{tbl}
+\floatname{tabulka}{Tabulka}
+
+\renewcommand{\thefootnote}{\roman{footnote}}
+
+\pagestyle{fancy}
+\lhead{Praktikum II - (3) Tranzistor}
+\rhead{Vladislav Wohlrath}
+\author{Vladislav Wohlrath}
+
+\bibliography{source}
+
+\begin{document}
+
+\begin{titlepage}
+\includepdf[pages={1}]{./graficos/203-tit.pdf}
+\end{titlepage}
+
+\section*{Pracovní úkoly}
+\begin{enumerate}
+\item Proměřte vstupní charakteristiku křemíkového tranzistoru BD 139 ( N P N ) v zapojení se společným emitorem pro nulový proud kolektorem ($R=\infty$) a odpor $R=\SI{1000}{\ohm}$.
+\item Proměřte výstupní charakteristiku tranzistoru BD 139 pro proudy bází - $I_B= \SI{0.1}{\milli\ampere}$, \SI{0.2}{\milli\ampere} a \SI{0.3}{\milli\ampere}.
+\item Změřte závislost kolektorového proudu $I_{CE}$ na proudu bází $I_{BE}$ pro kolektorové napětí $U_{CE} = \SI{2}{\volt}$, \SI{6}{\volt} a \SI{10}{\volt}.
+\item Pomocí lineární regrese určete činitel proudového zesílení $\beta$ v zapojení se společným emitorem.
+\end{enumerate}
+
+%Teoretická část
+\input{teorie.tex}
+
+%Výsledky měření
+\input{vysledky.tex}
+
+%Diskuze výsledků
+\input{diskuze.tex}
+
+%Závěr
+\input{zaver.tex}
+
+
+\printbibliography[title={Seznam použité literatury}]
+
+\end{document}

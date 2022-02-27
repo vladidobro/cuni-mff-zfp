@@ -1,0 +1,34 @@
+\section*{Teoretická část}
+
+Střední hodnota výkonu v obvodu protékaným střídavým proudem harmonického průběhu nezáleží jen na efektivních hodnotách proudu a napětí, ale také na jejich vzájemném fázovém posuvu \cite{skripta}
+\begin{equation} \label{e:ucinik}
+P=\frac{1}{T}\int_{0}^{T}u(t)i(t)dt=\frac{U_0I_0}{2}\cos \varphi = UI \cos \varphi \,,
+\end{equation}
+kde $U_0$, $I_0$ jsou špičkové hodnoty napětí a proudu, $U$, $I$ efektivní a $\varphi$ je fázový posuv proudu vůči napětí.
+Výraz $(\cos \varphi)$ se nazývá účiník.
+
+Na rezistoru nedochází k posuvu proudu a napětí, proto je účiník rovný jedné.
+
+Na kondenzátoru dochází k posuvu $\varphi = -\pi/2$ a tedy účiník bude rovný nule. Vlastnosti reálného kondenzátoru se téměř neliší od ideálního.
+
+Na ideální indukčnosti dochází k posuvu $\varphi = \pi/2$ a účiník by měl být rovný nule. Reálné cívky mají vlastní odpor a proto se používá náhradní zapojení, kdy reálnou cívku nahradíme ideální indukčností a odporem buď seriově nebo paralelně tak, aby výsledná impedance byla stejná.
+
+Pro sériové zapojení indukčnosti $L_S$ a odporu $R_S$ platí \cite{skripta}
+\begin{equation} \label{e:ser}
+R_S = \frac{U}{I}\frac{1}{\sqrt{1+\tan^2\varphi}} \qquad \qquad L_S = \frac{1}{\omega}\frac{U}{I} \sqrt{\frac{\tan^2\varphi}{1+\tan^2\varphi}}  \,.
+\end{equation}
+
+Pro paralelní zapojení indukčnosti $L_P$ a odporu $R_P$ platí \cite{skripta}
+\begin{equation} \label{e:par}
+R_P=\frac{U}{I} \sqrt{1+\tan^2\varphi} \qquad \qquad L_P=\frac{1}{\omega}\frac{U}{I} \sqrt{\frac{1+\tan^2\varphi}{\tan^2\varphi}} \,.
+\end{equation}
+
+Pokud spojíme sériově, resp. paralelně rezistor a kondenzátor o známé kapacitě $C$ a změříme účiník, můžeme určit velikost odporu $R_s$, resp. $R_p$ pomocí vztahů
+\begin{align}
+\label{e:RCs}
+%\begin{split}
+ R_s &= \frac{P}{I^2} \,,
+\\ \label{e:RCp}
+ R_p &= \frac{U^2}{P} \,.
+%\end{split}
+\end{align}

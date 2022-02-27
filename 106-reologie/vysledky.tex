@@ -1,0 +1,128 @@
+\section*{Výsledky měření}
+Teplota v místnosti byla \SI{25.6}{\degreeCelsius}.
+Atmosférický tlak byl \SI{992}{\hecto\pascal}.
+Relativní vlhkost vzduchu byla \SI{33}{\percent}.
+Hustota vzduchu $\sigma$ je při těchto podmínkách přibližně \SI{1.18(1)}{\kg\per\m\cubed}.
+
+
+V rotačním viskozimetru jsme měřili glycerin a škrob.
+Teplota obou kapalin byla \SI{25.6}{\degreeCelsius}.
+V kuličkovém pouze glycerin při teplotách v rozmezí \SI{25}{\degreeCelsius} až \SI{35}{\degreeCelsius}.
+
+Naměřené hodnoty viskozity glycerinu jsou uvedeny v tabulce \ref{tab::glyc} zaneseny do grafu \ref{grp::rotglyc}.
+Viskozita glycerinu na frekvenci otáčení nijak zřejmě nezávisí (Pearsonův korelační koeficient \num{0.04}).
+Glycerin proto považujeme za newtonovskou kapalinu.
+Viskozitu určíme metodou nejmenších čtverců, $\eta = $\SI{720(30)}{\milli\Pa\s}.
+
+\begin{tabulka}[htbp]
+\centering
+\begin{tabular}{ccc|ccc}
+rotor & frekvence (\si{\per\minute}) & viskozita (\si{\milli\pascal\s}) & rotor & frekvence (\si{\per\minute}) & viskozita (\si{\milli\pascal\s}) \\
+\hline 
+\multirow{9}{*}{L1} & \num{0.6} & 861 & \multirow{6}{*}{L2} & 5 & 828 \\
+& 1 & 801 & & 6 & 792 \\
+& 1.5 & 754 & & 10 & 644 \\
+& 2 & 721 & & 12 & 605 \\
+& 2.5 & 657 & & 20 & 610 \\
+& 3 & 653 & & 30 & 590 \\
+& 4 & 667 & & &  \\
+& 5 & 661 & \multirow{5}{*}{L3} & 20 & 940 \\
+& 6 & 656 & & 30 & 760 \\
+&   &     & & 50 & 760 \\
+\multirow{2}{*}{L4} & 100 & 740 & & 60 & 740 \\
+& 200 & 720 & & 100 & 750 \\
+\end{tabular}
+\caption{Naměřená viskozita glycerinu rotačním viskozimetrem}
+\label{tab::glyc}
+\end{tabulka}
+
+
+\begin{graph}[htbp] 
+\centering
+\input{glycerin.tex}
+\caption{Dynamická viskozita glycerinu měřená rotačním viskozimetrem s různými rotory (logaritmické měřítko na vodorovné ose)}
+\label{grp::rotglyc}
+\end{graph}
+
+U škroby je naopak závislost na rychlosti otáčení zřejmá, škrob je tedy nenewtonovská kapalina.
+Naměřené hodnoty jsou uvedeny v tabulce \ref{tab::skrob} a zaneseny do grafu \ref{grp::rotskrob}.
+Závislost fitujeme funkcí $\eta(F)=A \cdot F^{n-1}$, kde $F$ je frekvence otáčení rotoru v otáčkách za minutu.
+Po dosazení $D = 2 \cdot 2\pi \cdot F/60$ dostáváme konstanty v \eqref{eq::fitnenewton}
+\begin{equation}
+m=\SI{4900(400)}{\milli\Pa\s\tothe{n}} \qquad n = \num{0.42(3)}
+\end{equation}
+
+Zdánlivá viskozita se zvyšující se rychlostí klesá $(n < 1)$, škrob je tedy pseudoplastická látka \cite{skripta}.
+
+
+\begin{tabulka}[htbp]
+\centering
+\begin{tabular}{ccc|ccc}
+rotor & frekvence (\si{\per\minute}) & viskozita (\si{\milli\pascal\s}) & rotor & frekvence (\si{\per\minute}) & viskozita (\si{\milli\pascal\s}) \\
+\hline 
+\multirow{7}{*}{L2} & 10 & 3000 & \multirow{2}{*}{L2} & 5 & 4888 \\
+& 12 & 2670 & & 6 & 4405 \\
+& 20 & 1980 & & & \\
+& 30 & 1910 & & & \\
+& 50 & 1310 & & & \\
+& 60 & 1200 & & & \\
+& 100 & 950 & & & \\
+\end{tabular}
+\caption{Naměřené zdánlivé viskozity škrobu rotačním viskozimetrem}
+\label{tab::skrob}
+\end{tabulka}
+
+
+\begin{graph}[htbp] 
+\centering
+\input{skrob.tex}
+\caption{Zdánlivá viskozita škrobu v závislosti na rychlosti otáčení (logaritmické měřítko u obou os)}
+\label{grp::rotskrob}
+\end{graph}
+
+Kuličkový viskozimetr byl naplněn bezvodým glycerinem (\SI{99.5}{\percent}), jeho hustotu udává \cite{skripta} při naší teplotě \SI{1.257(1)}{\g\per\cm\cubed}.
+Naměřené hodnoty jsou uvedeny v tabulce \ref{tab::teplota} a zaneseny do grafů \ref{grp::kulickovej} a \ref{grp::kulickovejadapt}.
+Ze směrnice přímky \eqref{eq::primka} určíme aktivační energii $\epsilon_A = $(\num{1.00(2)})\,\SI{e10}{\joule}.
+
+\begin{tabulka}[htbp]
+\centering
+\begin{tabular}{ccc}
+teplota (\si{\degreeCelsius}) & čas (\si{\s}) & viskozita (\si{\milli\pascal\s}) \\ \hline 
+25.2	&		183	& 888 \\
+26.2	&		173	& 839 \\
+27.1	&		160	& 776 \\
+28.2	&		146	& 708 \\
+29.1	&		135	& 655 \\
+30.1	&		124	& 602 \\
+31.1	&		115	& 558 \\
+32.1	&		107	& 519 \\
+33		&		99	& 480 \\
+34		&		92	& 446 \\
+35		&		86	& 417 \\
+\end{tabular}
+\caption{Naměřené hodnoty kuličkovým viskozimetrem}
+\label{tab::teplota}
+\end{tabulka}
+
+
+\begin{graph}[htbp] 
+\centering
+\input{kulickovej.tex}
+\caption{Závislost viskozity glycerinu na teplotě, měřeno kuličkovým viskozimetrem}
+\label{grp::kulickovej}
+\end{graph}
+
+\begin{graph}[htbp] 
+\centering
+\input{kulickovejadapt.tex}
+\caption{Závislost viskozity glycerinu na teplotě (přizpůsobené osy)}
+\label{grp::kulickovejadapt}
+\end{graph}
+
+Pyknometrickou metodou jsme změřili hustotu glycerinu, který jsme používali v rotačním viskozimetru.
+Hmotnost prázdného pyknometru $m_1 = $\SI{24.805(5)}{\g}.
+Hmotnost pyknometru naplněného destilovanou vodou $m_2 =$\SI{49.678(5)}{\g}.
+Hmotnost pyknometru naplněného použitým glycerinem $m_3 = $\SI{56.042(5)}{\g}.
+Hustota destilované vody při \SI{25.6}{\degreeCelsius} je \SI{997.0(5)}{\g\per\cm\cubed} \cite{hustotavody}.
+Hustotu použitého glycerinu jsme podle \eqref{eq::pyknometr} určili jako \SI{1251.8(6)}{\g\per\cm\cubed}.
+Podle \cite{skripta} má glycerin tuto hustotu při koncentraci přibližně \SI{97.5}{\percent}.

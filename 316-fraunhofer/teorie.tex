@@ -1,0 +1,34 @@
+\section*{Teoretická část}
+Lámavý úhel $\varphi$ urříme tak, že změříme úhel mezi normálami obou přilehlých stěn. Jestliže tento úhel označíme $\phi$, pak platí
+\begin{equation} \label{e:vrchol}
+\varphi + \phi = \SI{180}{\degree} \,.
+\end{equation}
+
+Pokud je minimální deviace paprsku $\delta$ (viz. \cite{skripta}), pak pro index lomu $n$ platí
+\begin{equation} \label{e:indexlomu}
+n=\frac{\sin((\delta+\varphi)/2)}{\sin(\varphi/2)} \,.
+\end{equation}
+
+Úhel $\delta$ určíme tak, že provedeme měření v obou směrech. Pokud jsou údaje na goniometru v jednom směru $\alpha_1$ a v druhém $\alpha_2$, platí
+\begin{equation*}
+\delta = \frac{\left|\alpha_1-\alpha_2\right|}{2}
+\end{equation*}
+
+Podle \cite{skripta} definujeme střední disperzi
+\begin{equation}
+\Delta = n_F - n_C \,,
+\end{equation}
+relativní disperzi
+\begin{equation}
+\delta = \frac{\Delta}{n_D-1}
+\end{equation}
+a Abbeovo číslo
+\begin{equation}
+\gamma = \frac{1}{\delta} \,,
+\end{equation}
+kde $n_F$, $n_D$ a $n_C$ jsou indexy lomu odpovídající spektrálním čarám s vlnovými délkami $\lambda_F=\SI{486.1}{\nm}$, $\lambda_D=\SI{589.3}{\nm}$ a $\lambda_C=\SI{656.3}{\nm}$.
+
+Pokud předpokládáme normálně rozdělenou chybu veličin $\delta$ a $\varphi$ se standardní odchylkou $\sigma_\delta$ resp. $\sigma_\varphi$, která je malá, pak pro standardní odchylku indexu lomu $\sigma_n$ platí
+\begin{equation} \label{e:chyba}
+\sigma_n = \sqrt{\left( \frac{\partial n}{\partial \delta} \right)^2 \sigma_\delta^2 + \left( \frac{\partial n}{\partial \varphi }\right)^2 \sigma_\varphi^2} = \frac{1}{2\sin(\varphi/2)}\sqrt{  \left( \frac{\sin(\delta/2)}{\sin(\varphi/2)} \right)^2  \sigma_\delta^2      +         \left( \cos\left(\frac{\delta+\varphi}{2}\right) \right)^2 \sigma_\varphi^2         }
+\end{equation} 

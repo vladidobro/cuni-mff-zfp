@@ -1,0 +1,85 @@
+%VÝKON NA PROUDU
+\begin{tabulka}[htbp]
+\centering
+\begin{tabular}{c|c}
+proud výbojovou trubicí (\si{\mA}) & relativní intenzita \\ \hline
+6,50 & 80 \\
+6,00 & 78 \\
+5,50 & 74 \\
+5,00 & 70 \\
+4,50 & 66 \\
+\end{tabular}
+\caption{Závislost relativní intenzity na proudu výbojovou trubicí}
+\label{t:proud}
+\end{tabulka}
+
+
+\begin{graph}[htbp]
+\centering
+\input{proud.tex}
+\caption{Závislost relativní intenzity na proudu výbojovou trubicí}
+\label{g:proud}
+\end{graph}
+
+
+%PROFIL SVAZKU
+\begin{tabulka}[htbp]
+\centering
+\begin{tabular}{cc||cc||cc}
+$x$ (\si{\mm}) & $I$ & $x$ (\si{\mm}) & $I$ & $x$ (\si{\mm}) & $I$ \\ \hline
+15,45 & 6 & 15,90 & 60 & 16,35 & 78 \\ 
+15,50 & 14 & 15,95 & 64 & 16,40 & 72 \\ 
+15,55 & 14 & 16,00 & 70 & 16,45 & 60 \\ 
+15,60 & 18 & 16,05 & 76 & 16,50 & 50 \\ 
+15,65 & 24 & 16,10 & 80 & 16,55 & 38 \\ 
+15,70 & 34 & 16,15 & 84 & 16,60 & 28 \\ 
+15,75 & 40 & 16,20 & 82 & 16,65 & 14 \\ 
+15,80 & 44 & 16,25 & 82 & 16,70 & 8 \\ 
+15,85 & 52 & 16,30 & 82 & 16,75 & 4 \\ 
+\end{tabular}
+\caption{Měření profilu svazku, $I$ je intenzita v relativních jednotkách}
+\label{t:profil}
+\end{tabulka}
+
+
+\begin{graph}[htbp] 
+\centering
+\input{profil.tex}
+\caption{Měření profilu svazku, $I$ je intenzita v relativních jednotkách}
+\label{g:profil}
+\end{graph}
+
+
+%DIVERGENCE
+\begin{tabulka}[htbp]
+\centering
+\begin{tabular}{c|c|c}
+$s$ (\si{\cm}) & beam width clip (\si{\micro\metre}) & gaussian diameter (\si{\micro\metre}) \\
+\hline
+\num{8(1)} & 1040 & 1080 \\
+\num{132(3)} & 2680 & 2830 \\
+\num{243(5)} & --- & 4000 
+\end{tabular}
+\caption{Průměr svazku v různých vzdálenostech od výstupu laseru}
+\label{t:div}
+\end{tabulka}
+
+
+\begin{graph}[htbp] 
+\centering
+\input{div.tex}
+\caption{Průměr svazku v různých vzdálenostech od výstupu laseru}
+\label{g:div}
+\end{graph}
+
+
+%STUPEŇ POLARIZACE
+\begin{tabulka}[htbp]
+\centering
+\begin{tabular}{c|cccc}
+maximální & 610 &  630 & 680 & 680 \\
+minimální & 6 & 6 & 6 & 6 \\
+\end{tabular}
+\caption{Maximální a minimální naměřená relativní intenzita při různých orientacích polarizátoru}
+\label{t:pol}
+\end{tabulka}

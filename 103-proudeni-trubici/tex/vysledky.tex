@@ -1,0 +1,212 @@
+\section*{Výsledky měření}
+
+Měření jsme provedli pro tři trubice (A, B, C) o různých poloměrech, viz tabulka \ref{tab:trubky}. Změřené hodnoty $h$, $V$, a $t$ a z nich pomocí \eqref{eq:tlak-na-h} a \eqref{eq:Qv} vypočteny $p$ a $Q_v$ s odchylkami podle \eqref{eq:chybatlak} a \eqref{eq:chybaQv} resp. jsou uvedeny v tabulkách \ref{tab:vysledkyA}, \ref{tab:vysledkyB} a \ref{tab:vysledkyC}. Závislost $Q_v=Q_v(p)$ je vvynesena do grafu na obrázku \ref{graf:Qv_na_p}. Nafitované hodnoty parametrů v \eqref{eq:fit} a poloměry trubic jsou uvedeny v tabulce \ref{tab:fit}, viz diskuze.
+
+
+\begin{table}[htbp]
+\centering
+\begin{tabular}{|ccc|}
+\hline trubice & $r$ [mm] & $l$ [cm] \\ \hline
+ A & 1,2 $\pm$ 0,1 & 25,0 $\pm$ 0,2 \\ 
+ B & 1,5 $\pm$ 0,1 & 24,8 $\pm$ 0,2 \\ 
+ C & 2,4 $\pm$ 0,1 & 20,0 $\pm$ 0,2 \\ 
+\hline 
+\end{tabular} 
+\caption{Měřené trubice, jejich poloměry $r$ a délky $l$}
+\label{tab:trubky}
+\end{table}
+
+\begin{table}[htbp]
+\centering
+\begin{tabular}{|ccccc|}
+\hline
+$h$ [cm] & $V$ [ml] & $t$ [s] & $p$ [Pa] & $Q_v~$[ml.s\textsuperscript{-1}] \\ \hline
+5,9 $\pm$ 0,1 & 8,0 $\pm$ 0,2 & 9 & 577 $\pm$ 11 & 0,89 $\pm$ 0,05\\ 
+8,1 $\pm$ 0,1 & 9,4 $\pm$ 0,2 & 7 & 792 $\pm$ 11 & 1,34 $\pm$ 0,10 \\ 
+11,0 $\pm$ 0,1 & 24,0 $\pm$ 0,5 & 14 & 1076 $\pm$ 12 & 1,71 $\pm$ 0,07 \\ 
+12,0 $\pm$ 0,1 & 19,0 $\pm$ 0,5 & 10 & 1174 $\pm$ 12 & 1,90 $\pm$ 0,11 \\ 
+12,8 $\pm$ 0,1 & 23,5 $\pm$ 0,5 & 12 & 1252 $\pm$ 12 & 1,96 $\pm$ 0,10 \\ 
+13,8 $\pm$ 0,1 & 43 $\pm$ 1 & 20 & 1350 $\pm$ 12 & 2,15 $\pm$ 0,08 \\ 
+14,8 $\pm$ 0,1 & 48 $\pm$ 1 & 20 & 1447 $\pm$ 13 & 2,40 $\pm$ 0,08 \\ 
+15,8 $\pm$ 0,1 & 41 $\pm$ 1 & 16 & 1545 $\pm$ 13 & 2,56 $\pm$ 0,10 \\ 
+16,9 $\pm$ 0,1 & 39 $\pm$ 1 & 14 & 1653 $\pm$ 13 & 2,79 $\pm$ 0,13 \\ 
+17,8 $\pm$ 0,1 & 38 $\pm$ 1 & 13 & 1741 $\pm$ 14 & 2,92 $\pm$ 0,14 \\ 
+18,8 $\pm$ 0,1 & 43 $\pm$ 1 & 14 & 1839 $\pm$ 14 & 3,07 $\pm$ 0,14 \\ 
+20,0 $\pm$ 0,1 & 38 $\pm$ 1 & 12 & 1956 $\pm$ 14 & 3,17 $\pm$ 0,16 \\ 
+21,1 $\pm$ 0,1 & 38 $\pm$ 1 & 11 & 2063 $\pm$ 15 & 3,45 $\pm$ 0,19 \\ 
+22,1 $\pm$ 0,1 & 35 $\pm$ 1 & 10 & 2161 $\pm$ 15 & 3,50 $\pm$ 0,21 \\ 
+23,4 $\pm$ 0,1 & 41 $\pm$ 1 & 11 & 2288 $\pm$ 16 & 3,73 $\pm$ 0,20 \\ 
+24,9 $\pm$ 0,1 & 41 $\pm$ 1 & 10 & 2435 $\pm$ 16 & 4,10 $\pm$ 0,23 \\ 
+26,4 $\pm$ 0,1 & 42 $\pm$ 1 & 10 & 2582 $\pm$ 17 & 4,20 $\pm$ 0,24 \\ \hline
+\end{tabular}
+\caption{Naměřené hodnoty pro trubici A}
+\label{tab:vysledkyA}
+\end{table}
+
+\begin{table}[htbp]
+\centering
+\begin{tabular}{|ccccc|}
+\hline
+$h$ [cm] & $V$ [ml] & $t$ [s] & $p$ [Pa] & $Q_v~$[ml.s\textsuperscript{-1}] \\ \hline
+2,5 $\pm$ 0,1 & 9,4 $\pm$ 0,2 & 7 & 244 $\pm$ 10 & 1,34 $\pm$ 0,10 \\ 
+4,0 $\pm$ 0,1 & 21,5 $\pm$ 0,5 & 8 & 391 $\pm$ 10 & 2,69 $\pm$ 0,18 \\ 
+5,0 $\pm$ 0,1 & 23,0 $\pm$ 0,5 & 7 & 489 $\pm$ 11 & 3,29 $\pm$ 0,25 \\ 
+6,0 $\pm$ 0,1 & 39 $\pm$ 1 & 10 & 587 $\pm$ 11 & 3,90 $\pm$ 0,22 \\ 
+7,3 $\pm$ 0,1 & 46 $\pm$ 1 & 10 & 714 $\pm$ 11 & 4,60 $\pm$ 0,26 \\ 
+8,3 $\pm$ 0,1 & 41 $\pm$ 1 & 8 & 812 $\pm$ 11 & 5,13 $\pm$ 0,35 \\ 
+9,3 $\pm$ 0,7 & 41 $\pm$ 1 & 8 & 909 $\pm$ 69 & 5,13 $\pm$ 0,35 \\ 
+12 $\pm$ 3 & 48 $\pm$ 1 & 9 & 1170 $\pm$ 300 & 5,33 $\pm$ 0,32 \\ 
+15 $\pm$ 2 & 49 $\pm$ 1 & 8 & 1470 $\pm$ 200 & 6,13 $\pm$ 0,40 \\ 
+22,2 $\pm$ 0,4 & 176 $\pm$ 2 & 24 & 2171 $\pm$ 41 & 7,33 $\pm$ 0,18 \\ 
+23,2 $\pm$ 0,2 & 182 $\pm$ 2 & 24 & 2269 $\pm$ 23 & 7,58 $\pm$ 0,18 \\ 
+25,3 $\pm$ 0,2 & 228 $\pm$ 2 & 30 & 2474 $\pm$ 24 & 7,60 $\pm$ 0,15 \\ 
+26,7 $\pm$ 0,2 & 194 $\pm$ 2 & 25 & 2611 $\pm$ 24 & 7,76 $\pm$ 0,18 \\  \hline
+\end{tabular}
+\caption{Naměřené hodnoty pro trubici B}
+\label{tab:vysledkyB}
+\end{table}
+
+\begin{table}[htbp]
+\centering
+\begin{tabular}{|ccccc|}
+\hline
+$h$ [cm] & $V$ [ml] & $t$ [s] & $p$ [Pa] & $Q_v~$[ml.s\textsuperscript{-1}] \\ \hline
+1,6 $\pm$ 0,1 & 8,0 $\pm$ 0,2 & 15 & 156 $\pm$ 10 & 0,53 $\pm$ 0,02 \\ 
+3,5 $\pm$ 0,1 & 160 $\pm$ 2 & 30 & 342 $\pm$ 10 & 5,33 $\pm$ 0,12 \\ 
+5,0 $\pm$ 0,6 & 200 $\pm$ 2 & 30 & 489 $\pm$ 59 & 6,67 $\pm$ 0,13 \\ 
+6,0 $\pm$ 0,6 & 224 $\pm$ 2 & 30 & 587 $\pm$ 59 & 7,47 $\pm$ 0,15 \\ 
+6,8 $\pm$ 0,6 & 194 $\pm$ 2 & 25 & 665 $\pm$ 59 & 7,76 $\pm$ 0,18 \\ 
+8,0 $\pm$ 0,3 & 210 $\pm$ 2 & 25 & 782 $\pm$ 30 & 8,40 $\pm$ 0,19 \\ 
+9,0 $\pm$ 0,1 & 226 $\pm$ 2 & 25 & 880 $\pm$ 11 & 9,04 $\pm$ 0,20 \\ 
+10,1 $\pm$ 0,1 & 198 $\pm$ 2 & 20 & 988 $\pm$ 11 & 9,90 $\pm$ 0,27 \\ 
+11,3 $\pm$ 0,1 & 208 $\pm$ 2 & 20 & 1105 $\pm$ 12 & 10,40 $\pm$ 0,28 \\ 
+12,7 $\pm$ 0,1 & 226 $\pm$ 2 & 20 & 1242 $\pm$ 12 & 11,30 $\pm$ 0,30 \\ 
+13,6 $\pm$ 0,1 & 212 $\pm$ 2 & 18 & 1330 $\pm$ 12 & 11,78 $\pm$ 0,35 \\ 
+14,5 $\pm$ 0,1 & 206 $\pm$ 2 & 17 & 1418 $\pm$ 13 & 12,12 $\pm$ 0,38 \\ 
+15,3 $\pm$ 0,1 & 228 $\pm$ 2 & 18 & 1496 $\pm$ 13 & 12,67 $\pm$ 0,37 \\ 
+16,0 $\pm$ 0,1 & 196 $\pm$ 2 & 15 & 1565 $\pm$ 13 & 13,07 $\pm$ 0,46 \\   \hline
+\end{tabular}
+\caption{Naměřené hodnoty pro trubici C}
+\label{tab:vysledkyC}
+\end{table}
+
+
+\begin{figure}[htbp] 
+\centering
+\input{graf1.tex}
+\caption{Závislost objemového průtoku na úbytku statického tlaku na vyšetřované délce trubice $l$}
+\label{graf:Qv_na_p}
+\end{figure}
+
+\begin{table}[htbp]
+\centering
+\begin{tabular}{|cccc|} \hline
+trubice & a [10\textsuperscript{-3}.ml.s\textsuperscript{-1}.Pa\textsuperscript{-1}] & b [ml.s\textsuperscript{-1}] & r [mm] \\ \hline
+A & 1,67 $\pm$0,03  & -0,05 $\pm$ 0,05 & 0,975 $\pm$ 0,004\\ 
+B & 6,508 $\pm$ 0,001 & 0,0 $\pm$ 0,3 & 1,367 $\pm$ 0,006 \\ 
+C & 26 $\pm$ 5 & -3,5 $\pm$ 1,0 & 1,83 $\pm$ 0,03 \\  \hline
+\end{tabular} 
+\caption{Nafitované parametry $a$, $b$ a poloměry trubic}
+\label{tab:fit}
+\end{table}
+
+Hodnoty $Re$ a $k$ vypočítané pomocí \eqref{eq:reynoldsvypocet} a \eqref{eq:kvypocet} a jejich odchylky pomocí \eqref{eq:reynoldschyba} a \eqref{eq:kchyba} resp. pro každé měření jsou uvedeny v tabulkách \ref{tab:kReA}, \ref{tab:kReB} a \ref{tab:kReC}. Závislost $k(Re)$ je spolu s teoretickou pro laminární \eqref{eq:klaminarni} a turbulentní \eqref{eq:kturbulentni} vynesena do grafu \ref{graf:k_na_Re}. V grafu není nakreslena jedna hodnota trubice C ($k =$~1,1).
+
+\begin{table}[htbp]
+\centering
+\begin{tabular}{|cccc|}
+\hline 
+$p$~[Pa]  &  $Q_v$~[ml.s\textsuperscript{-1}]  & $Re$ & $k$ \\ \hline
+ 577 $\pm$ 11 & 0,89 $\pm$ 0,05 & 340 $\pm$ 29 & 0,051 $\pm$ 0,007\\ 
+ 792 $\pm$ 11 & 1,34 $\pm$ 0,10 & 514 $\pm$ 49 & 0,031 $\pm$ 0,005\\ 
+ 1076 $\pm$ 12 & 1,71 $\pm$ 0,07 & 656 $\pm$ 48 & 0,026 $\pm$ 0,003\\ 
+ 1174 $\pm$ 12 & 1,90 $\pm$ 0,11 & 727 $\pm$ 60 & 0,023 $\pm$ 0,003\\ 
+ 1252 $\pm$ 12 & 1,96 $\pm$ 0,10 & 749 $\pm$ 57 & 0,023 $\pm$ 0,003\\ 
+ 1350 $\pm$ 12 & 2,15 $\pm$ 0,08 & 822 $\pm$ 57 & 0,020 $\pm$ 0,002\\ 
+ 1447 $\pm$ 13 & 2,40 $\pm$ 0,08 & 918 $\pm$ 62 & 0,018 $\pm$ 0,002\\ 
+ 1545 $\pm$ 13 & 2,56 $\pm$ 0,10 & 980 $\pm$ 70 & 0,016 $\pm$ 0,002\\ 
+ 1653 $\pm$ 13 & 2,79 $\pm$ 0,13 & 1066 $\pm$ 79 & 0,015 $\pm$ 0,002\\ 
+ 1741 $\pm$ 14 & 2,92 $\pm$ 0,14 & 1118 $\pm$ 85 & 0,014 $\pm$ 0,002\\ 
+ 1839 $\pm$ 14 & 3,07 $\pm$ 0,14 & 1175 $\pm$ 86 & 0,014 $\pm$ 0,002\\ 
+ 1956 $\pm$ 14 & 3,17 $\pm$ 0,16 & 1211 $\pm$ 94 & 0,014 $\pm$ 0,002\\ 
+ 2063 $\pm$ 15 & 3,45 $\pm$ 0,19 & 1321 $\pm$ 105 & 0,012 $\pm$ 0,002\\ 
+ 2161 $\pm$ 15 & 3,50 $\pm$ 0,21 & 1339 $\pm$ 111 & 0,012 $\pm$ 0,002\\ 
+ 2288 $\pm$ 16 & 3,73 $\pm$ 0,20 & 1426 $\pm$ 112 & 0,012 $\pm$ 0,002\\ 
+ 2435 $\pm$ 16 & 4,10 $\pm$ 0,23 & 1568 $\pm$ 128 & 0,010 $\pm$ 0,002\\ 
+ 2582 $\pm$ 17 & 4,20 $\pm$ 0,24 & 1607 $\pm$ 131 & 0,010 $\pm$ 0,002\\
+\hline
+\end{tabular}
+\caption{Hodnoty $Re$ a $k$ pro trubici A}
+\label{tab:kReA}
+\end{table}
+
+\begin{table}[htbp]
+\centering
+\begin{tabular}{|cccc|}
+\hline 
+$p$~[Pa]  &  $Q_v$~[ml.s\textsuperscript{-1}]  & $Re$ & $k$ \\ \hline
+ 244 $\pm$ 10 & 1,34 $\pm$ 0,10 & 366 $\pm$ 35 & 0,052 $\pm$ 0,008\\ 
+ 391 $\pm$ 10 & 2,69 $\pm$ 0,18 & 733 $\pm$ 66 & 0,021 $\pm$ 0,003\\ 
+ 489 $\pm$ 11 & 3,29 $\pm$ 0,25 & 896 $\pm$ 86 & 0,015 $\pm$ 0,002\\ 
+ 587 $\pm$ 11 & 3,90 $\pm$ 0,22 & 1064 $\pm$ 101 & 0,015 $\pm$ 0,002\\ 
+ 714 $\pm$ 11 & 4,60 $\pm$ 0,26 & 1255 $\pm$ 101 & 0,013 $\pm$ 0,002\\ 
+ 812 $\pm$ 11 & 5,13 $\pm$ 0,35 & 1398 $\pm$ 125 & 0,012 $\pm$ 0,002\\ 
+ 909 $\pm$ 69 & 5,13 $\pm$ 0,35 & 1398 $\pm$ 125 & 0,013 $\pm$ 0,002\\ 
+ 1170 $\pm$ 300 & 5,33 $\pm$ 0,32 & 1455 $\pm$ 122 & 0,016 $\pm$ 0,005\\ 
+ 1470 $\pm$ 200 & 6,13 $\pm$ 0,40 & 1671 $\pm$ 148 & 0,015 $\pm$ 0,003\\ 
+ 2171 $\pm$ 41 & 7,33 $\pm$ 0,18 & 2001 $\pm$ 128 & 0,015 $\pm$ 0,001 \\ 
+ 2269 $\pm$ 23 & 7,58 $\pm$ 0,18 & 2069 $\pm$ 132 & 0,015 $\pm$ 0,001 \\ 
+ 2474 $\pm$ 24 & 7,60 $\pm$ 0,15 & 2073 $\pm$ 129 & 0,016 $\pm$ 0,001 \\ 
+ 2611 $\pm$ 24 & 7,76 $\pm$ 0,18 & 2117 $\pm$ 134 & 0,017 $\pm$ 0,001 \\ 
+\hline
+\end{tabular}
+\caption{Hodnoty $Re$ a $k$ pro trubici B}
+\label{tab:kReB}
+\end{table}
+
+\begin{table}[htbp]
+\centering
+\begin{tabular}{|cccc|}
+\hline 
+$p$~[Pa]  &  $Q_v$~[ml.s\textsuperscript{-1}]  & $Re$ & $k$ \\ \hline
+ 156 $\pm$ 10 & 0,53 $\pm$ 0,02 & 109 $\pm$ 8 & 1,11 $\pm$ 0,14\\ 
+ 342 $\pm$ 10 & 5,33 $\pm$ 0,12 & 1088 $\pm$ 70 & 0,024 $\pm$ 0,002\\ 
+ 489 $\pm$ 59 & 6,67 $\pm$ 0,13 & 1360 $\pm$ 87 & 0,022 $\pm$ 0,004\\ 
+ 587 $\pm$ 59 & 7,47 $\pm$ 0,15 & 1523 $\pm$ 97 & 0,021 $\pm$ 0,003\\ 
+ 665 $\pm$ 59 & 7,76 $\pm$ 0,18 & 1583 $\pm$ 102 & 0,022 $\pm$ 0,003\\ 
+ 782 $\pm$ 30 & 8,40 $\pm$ 0,19 & 1713 $\pm$ 111 & 0,022 $\pm$ 0,002\\ 
+ 880 $\pm$ 11 & 9,04 $\pm$ 0,20 & 1844 $\pm$ 119 & 0,022 $\pm$ 0,002\\ 
+ 988 $\pm$ 11 & 9,90 $\pm$ 0,27 & 2019 $\pm$ 134 & 0,020 $\pm$ 0,002\\ 
+ 1105 $\pm$ 12 & 10,40 $\pm$ 0,28 & 2121 $\pm$ 141 & 0,021 $\pm$ 0,002\\ 
+ 1242 $\pm$ 12 & 11,30 $\pm$ 0,30 & 2305 $\pm$ 152 & 0,020 $\pm$ 0,002\\ 
+ 1330 $\pm$ 12 & 11,78 $\pm$ 0,35 & 2402 $\pm$ 161 & 0,020 $\pm$ 0,002\\ 
+ 1418 $\pm$ 13 & 12,12 $\pm$ 0,38 & 2472 $\pm$ 168 & 0,020 $\pm$ 0,002\\ 
+ 1496 $\pm$ 13 & 12,67 $\pm$ 0,37 & 2584 $\pm$ 174 & 0,019 $\pm$ 0,002\\ 
+ 1565 $\pm$ 13 & 13,07 $\pm$ 0,46 & 2665 $\pm$ 186 & 0,019 $\pm$ 0,002\\ 
+\hline
+\end{tabular}
+\caption{Hodnoty $k$ a $Re$ pro trubici C}
+\label{tab:kReC}
+\end{table}
+
+
+
+\begin{figure}[htbp] 
+\centering
+\input{grafkre.tex}
+\caption{Závislost součinitelu odporu trubice $k$ na Reynoldsově čísle $Re$. Zobrazeny jsou i teoretické závislosti pro laminární a turbulentní proudění.}
+\label{graf:k_na_Re}
+\end{figure}
+
+
+
+
+
+
+
+
+
+
+
+
+

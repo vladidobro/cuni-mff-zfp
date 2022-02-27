@@ -1,0 +1,80 @@
+\documentclass[a4paper]{article}
+
+\usepackage[czech]{babel} %https://github.com/michal-h21/biblatex-iso690
+\usepackage[
+   backend=biber      % if we want unicode 
+  ,style=iso-numeric % or iso-numeric for numeric citation method          
+  ,babel=other        % to support multiple languages in bibliography
+  ,sortlocale=cs_CZ   % locale of main language, it is for sorting
+  ,bibencoding=UTF8   % this is necessary only if bibliography file is in different encoding than main document
+]{biblatex}
+
+\usepackage[utf8]{inputenc}
+\usepackage{fancyhdr}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage[left=2cm,right=2cm,top=2.5cm,bottom=2.5cm]{geometry}
+\usepackage{graphicx}
+\usepackage{pdfpages}
+\usepackage{url}
+\usepackage{multirow}
+
+\usepackage{siunitx}
+\sisetup{locale = DE}  %, separate-uncertainty = true    kdybych chtel +/-
+
+\usepackage{float}
+\newfloat{graph}{htbp}{grp}
+\floatname{graph}{Graf}
+\newfloat{tabulka}{htbp}{tbl}
+\floatname{tabulka}{Tabulka}
+
+\renewcommand{\thefootnote}{\roman{footnote}}
+
+\pagestyle{fancy}
+\lhead{Praktikum II - (6) Měření účiníku}
+\rhead{Vladislav Wohlrath}
+\author{Vladislav Wohlrath}
+
+\bibliography{source}
+
+\begin{document}
+
+\begin{titlepage}
+\includepdf[pages={1}]{./graficos/titlelist.pdf}
+\end{titlepage}
+
+\section*{Pracovní úkoly}
+\begin{enumerate}
+\item Změřte účiník:
+\begin{enumerate}
+\item rezistoru,
+\item kondenzátoru ($C=\SI{10}{\micro\farad}$),
+\item cívky.
+\end{enumerate}
+\item Spočtěte fázový posun proudu a napětí. Určete chybu měření. Diskutujte shodu výsledků s teoretickými hodnotami pro ideální prvky.
+\item Pro cívku vypočtěte indukčnost a odpor v sériovém a paralelním náhradním zapojení.
+\item Změřte účiník sériového a paralelního zapojení rezistoru a kondenzátoru pro kapacity v intervalu $C$ =  \mbox{1--\SI{10}{\micro\farad}} a spočtěte fázový posuv. Výsledky zpracujte graficky. Z naměřených hodnot stanovte odpor rezistoru a porovnejte ho s hodnotou přímo naměřenou digitálním multimetrem. Určete chyby měření a rozhodněte, které z obou zapojení je v daném případě vhodnější pro stanovení odporu.
+\item Změřte závislost proudu a výkonu na velikosti kapacity zařazené do sériového RLC obvodu pro kapacity do \SI{10}{\micro\farad}. Výsledky zpracujte graficky, v závislosti na zařazené kapacitě vyneste účiník, fázový posuv napětí vůči proudu a výkon.
+\item V průběhu měření seriového RC obvodu připojte na kondenzátor digitální osciloskop Tektronix a pozorujte změnu fáze napětí na kondenzátoru vzhledem k průběhu napětí zdroje v závislosti na velikosti nastavené kapacity v intervalu 1--\SI{10}{\micro\farad}. Popište kvalitativně pozorované jevy a vysvětlete je. Stručný popis ovládání a schema připojení osciloskopu je přiloženo u úlohy.
+
+
+\end{enumerate}
+
+%Teoretická část
+\input{teorie.tex}
+
+%Výsledky měření
+\input{vysledky.tex}
+
+%Diskuze výsledků
+\input{diskuze.tex}
+
+%Závěr
+\input{zaver.tex}
+
+
+\printbibliography[title={Seznam použité literatury}]
+
+\includepdf[pages={1}]{./tabulka.pdf}
+
+\end{document}

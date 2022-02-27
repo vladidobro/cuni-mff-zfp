@@ -1,0 +1,29 @@
+\section*{Teoretická část}
+Budeme studovat spektrum gama záření polovodičovým spektrometrem. Po dopadu fotonu vznikají elektrony, jejichž energii detektor měří. Výsledné spektrum je energetické spektrum takto vzniklých elektronů.
+Elektrony vznikají třemi hlavními způsoby.
+\begin{enumerate}
+\item \emph{Fotoefekt}\cite{skripta} |
+Foton vyrazí z atomu elektron a předá mu všechnu svoji energii. Výstupní práce je zpravidla zanedbatelná vůči energii fotonu, takže pík bude mít energii téměř rovnou energii vstupního gama záření. Mluvíme o \emph{píku plné absorbce} (FEP).
+\item \emph{Comptonův jev}\cite{skripta} | Foton se pružně rozptýlí na volném elektronu a předá mu část své energie. Největší možnou energii $E_c$ foton předá při rozptylu o úhel \SI{180}{\degreeCelsius}. Pokud tento rozptýlený foton z detektoru unikne, je spektrum spojité v energiích od 0 do $E_c$. V $T_c$ tedy budeme ve spektru pozorovat \emph{comptonovu hranu}.
+
+Rozptýlený foton však může dále interagovat. Pokud se například ještě jednou pružně rozptýlí a poté unikne, může předat maximální energii $E_{2c}>E_c$ a budeme pozorovat spojité spektrum od 0 do $E_{2c}$. V $E_{2c}$ budeme tedy pozorovat další hranu.
+\item \emph{Tvorba elektron-pozitronových párů}\cite{skripta} | Pokud je energie dopadajícího fotonu dostatečně vysok (větší než $2m_ec^2=2\cdot\kev{511}$), může foton zaniknout a vytvořit pár elektron-pozitron. Pozitron velmi rychle anihiluje za vzniku dvou fotonů s energií \kev{511} a opačnou hybností. Fotony dále interagují s detektorem a pozorujeme podobné efekty jako výše.
+
+Pokud jeden z fotonů unikne z detektoru, naměříme energii o \kev{511} menší než energii dopadajícího fotonu, pak mluvíme o \emph{píku jednoho úniku} (SEP). Pokud uniknou oba fotony, naměříme o $2\cdot \kev{511}$ menší energii a mluvíme o \emph{píku dvou úniků} (DEP).
+\end{enumerate}
+
+Foton se může také nejdříve rozptýlit mimo aktivní část detektoru a až poté být detekován. Energetické spektrum je opět omezeno minimální energií rozptýleného elektronu a geometrií detektoru. Proto ve spektru pozorujeme \emph{hranu zpětného odrazu}.
+
+Také se může stát, že elektron-pozitronový pár vznikne mimo aktivní oblast detektoru. Jeden z fotonů potom většinou dolétne do aktivní části a my pozorujeme tzv. \emph{anihilační pík} na \kev{511}.
+
+
+
+Statistickou nejistotu energií píků určujeme následujícím způsobem. Předpokládáme, že se jednotlivé události řídí normálním rozdělením. Pokud změříme $N$ událostí (net count) tak naměřené rozdělení bude mít standardní odchylku
+\begin{equation}
+\sigma_N=\frac{\text{FWHM}}{2\sqrt{2\log2}} \,,
+\end{equation}
+kde FWHM je šířka píku v polovině maxima, kterou nafituje program.
+Nejistota určení středu rozdělení je potom
+\begin{equation}
+\sigma=\frac{\sigma_N}{\sqrt{N}}
+\end{equation}

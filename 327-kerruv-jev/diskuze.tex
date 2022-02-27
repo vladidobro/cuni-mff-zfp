@@ -1,0 +1,15 @@
+\section*{Diskuze}
+Z grafů \ref{g:1} a \ref{g:2} je vidět, že vzorek reaguje na změny elektrického pole velmi pomalu. Je možné také usuzovat, že čím silnější pole je, tím pomaleji na něj vzorek reaguje (např. při změny z 950 na \SI{1000}{\volt} intenzita i po dvou minutách velmi rychle klesá, u nižších napětí tento jev není tak výrazný). 
+
+V prvním i druhém měření vyšla téměř totožná závislost (viz graf \ref{g:3}). Hodnoty se mírně liší, ale pro naše účely by stačilo měřit s intervalem \SI{1}{\minute}.
+
+V grafu \ref{g:4} ve skutečnosti není na svislou osu vynesen $\arcsin$. V rozsahu, ve kterém se pohybujeme, není $\sin^2$ prostá funkce, proto jsme pro napětí větší než půlvlnné vynesli funkci $\pi-\arcsin$.
+
+Během celého průběhu druhého měření nevystoupala intenzita na vyšší hodnotu než \SI{94}{\percent} $I_0$. To by se~v našem uspořádání nemělo stát, obvzláště podezřelé je, že na druhé měření $I_0$ vzrostla, ale hodnoty $I$ měly maximum přibližně stále stejně jako v prvním měření. Usoudili jsme tedy, že naměřená $I_0$ je chybná a nahradili ji maximem za celé měření.
+
+Hodnoty v tabulce \ref{t:1} jsme vzali jako poslední naměřené hodnoty v grafech \ref{g:1} a \ref{g:2}. To by mělo dobrý smysl, kdyby už byla intenzita ustálená, tedy pro napětí do \SI{900}{\volt} tyto hodnoty považujeme za správné. Nicméně z~grafů je zřejmé, že pro vyšší napětí intenzita jistě ustálená ještě není, a proto je zatížena velkou chybou.
+Z~tohoto důvodu jsme také tyto body vyřadili z fitu.
+
+Přestože v rovnici \eqref{e:fit} žádný absolutní člen nefiguruje, při lineární regresi jsme ho použili. Důvodem je, že závislost žádné přímce procházející počátkem dobře neodpovídá (pokud nechceme fitovat pouze první čtyři téměř nulové hodnoty). Vybrali jsme tedy větší část rozsahu, která se chová afinně, a tu nafitovali. Příčinou této nepříjemnosti možná mohla být např. nelinearita vzorku nebo špatně zkřížené polarizátory.
+
+Při výpočtu Kerrovy konstanty jsme používali parametry $l$ a $d$, o kterých předpokládáme, že jejich chyba je zanedbatelně malá. Pokud by tomu tak nebylo, mohly ovlivnit správnost našeho výsledku.

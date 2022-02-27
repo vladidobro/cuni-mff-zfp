@@ -1,0 +1,72 @@
+\documentclass[a4paper]{article}
+
+\usepackage[czech]{babel} %https://github.com/michal-h21/biblatex-iso690
+\usepackage[
+   backend=biber      % if we want unicode 
+  ,style=iso-numeric % or iso-numeric for numeric citation method          
+  ,babel=other        % to support multiple languages in bibliography
+  ,sortlocale=cs_CZ   % locale of main language, it is for sorting
+  ,bibencoding=UTF8   % this is necessary only if bibliography file is in different encoding than main document
+]{biblatex}
+
+\usepackage[utf8]{inputenc}
+\usepackage{fancyhdr}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage[left=2cm,right=2cm,top=2.5cm,bottom=2.5cm]{geometry}
+\usepackage{graphicx}
+\usepackage{pdfpages}
+\usepackage{url}
+
+\usepackage{siunitx}
+\sisetup{locale = DE, separate-uncertainty = true} %    kdybych chtel +/-
+
+\usepackage{float}
+\newfloat{graph}{htbp}{grp}
+\floatname{graph}{Graf}
+\newfloat{tabulka}{htbp}{tbl}
+\floatname{tabulka}{Tabulka}
+
+\renewcommand{\thefootnote}{\roman{footnote}}
+
+\pagestyle{fancy}
+\lhead{Praktikum II - (5) Měření osciloskopem}
+\rhead{Vladislav Wohlrath}
+\author{Vladislav Wohlrath}
+
+\bibliography{source}
+
+\begin{document}
+
+\begin{titlepage}
+\includepdf[pages={1}]{./graficos/titlelist.pdf}
+\end{titlepage}
+
+\section*{Pracovní úkoly}
+\begin{enumerate}
+\item Pomocí osciloskopu změřte špičkovou hodnotu napětí na svorkách sekundárního vinutí transformátoru a porovnejte ji s hodnotou naměřenou na střídavém rozsahu digitálního voltmetru.
+\item Podle vlastní volby sledujte činnost jednocestného nebo dvoucestného usměrňovače s křemíkovými diodami \textbf{KY711}
+	\begin{enumerate}
+		\item při maximální hodnotě zatěžovacího odporu \SI{10}{\kilo\ohm} sledujte závislost stejnosměrného napětí na filtrační kapacitě $C$ v intervalu 0--\SI{10}{\micro\farad}. Hodnotu usměrněného napětí při $C=\SI{10}{\micro\farad}$ srovnejte se špičkovou hodnotou pulzního průběhu.
+		\item změřte závislost filtrační kapacity $C$, potřebné k tomu, aby střídavá složka usměrněného napětí tvořila \SI{10}{\percent} špičkové hodnoty (tj. asi \SI{1}{\volt}), na odebíraném proudu. U jednocestného usměrňovače měřte do proudu \SI{0.6}{\milli\ampere}, u dvoucestného do proudu \SI{1}{\milli\ampere}.
+		\item naměřené závislosti zpracujte graficky. Do grafu uvádějícího závislost filtrační kapacity $C$ na proudu vyneste také závislost časové konstanty $\tau=R_Z C$ na proudu.
+	\end{enumerate}
+\item Zobrazte na osciloskopu V-A charakteristiku vakuové diody \textbf{EZ81} a Zenerovy diody \textbf{KZ703} podle schématu připojeného k úloze. Orientačně načrtněte pozorované charakteristiky a vyznačte měřítka na osách. Odhadněte napětí na diodách při proudu \SI{20}{\milli\ampere} v propustném směru. Určete Zenerovo napětí.
+\end{enumerate}
+
+%Teoretická část
+\input{teorie.tex}
+
+%Výsledky měření
+\input{vysledky.tex}
+
+%Diskuze výsledků
+\input{diskuze.tex}
+
+%Závěr
+\input{zaver.tex}
+
+
+\printbibliography[title={Seznam použité literatury}]
+
+\end{document}

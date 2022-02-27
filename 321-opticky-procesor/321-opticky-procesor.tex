@@ -1,0 +1,71 @@
+\documentclass[a4paper]{article}
+
+\usepackage[czech]{babel} %https://github.com/michal-h21/biblatex-iso690
+\usepackage[
+   backend=biber      % if we want unicode 
+  ,style=iso-numeric % or iso-numeric for numeric citation method          
+  ,babel=other        % to support multiple languages in bibliography
+  ,sortlocale=cs_CZ   % locale of main language, it is for sorting
+  ,bibencoding=UTF8   % this is necessary only if bibliography file is in different encoding than main document
+]{biblatex}
+
+\usepackage[utf8]{inputenc}
+\usepackage{fancyhdr}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage[left=2cm,right=2cm,top=2.5cm,bottom=2.5cm]{geometry}
+\usepackage{graphicx}
+\usepackage{pdfpages}
+\usepackage{url}
+\usepackage{multirow}
+\usepackage{siunitx}
+\sisetup{locale = DE, separate-uncertainty = true} %    kdybych chtel +/-
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{float}
+\newfloat{graph}{htbp}{grp}
+\floatname{graph}{Graf}
+\newfloat{tabulka}{htbp}{tbl}
+\floatname{tabulka}{Tabulka}
+
+\renewcommand{\thefootnote}{\roman{footnote}}
+
+\pagestyle{fancy}
+\lhead{Praktikum III - (21) Koherentní optický procesor}
+\rhead{Vladislav Wohlrath}
+\author{Vladislav Wohlrath}
+
+\bibliography{source}
+
+\begin{document}
+
+\begin{titlepage}
+\includepdf[pages={1}]{./graficos/titlelist.pdf}
+\end{titlepage}
+
+\section*{Pracovní úkoly}
+\begin{enumerate}
+\item Na optickém stole je sestaven Koherentní optický procesor. Na obr. v „Pokynech měření“ (nebo skripta str. 188) je vyznačeno schematické uspořádání a vyznačeny ohniskové délky čoček, které jsou v úloze k dispozici. Ověřte, zda čočky Č1 a Č2 zachovávají rovnoběžnost paprsků. Spočtěte a ověřte rozšíření paprsku použitým teleskopem. Změřte zvětšení obrazu předmětu v rovině P3 a zvětšení obrazu Fourierova spektra v rovině P4.
+\item Pozorujte Fourierovský obraz následujících tří předmětů umístěných v rovině P1: čtvercového otvoru, soustavy rovnoběžných pruhů a síťky. Proměřte Fourierova spektra těchto předmětů v rovině P2 nebo P4 a z naměřených údajů vypočítejte rozměry předmětů, tj. velikost stran čtvercového otvoru, šířku a periodu soustavy rovnoběžných pruhů a periodu a šířku pruhů síťky.
+\item Parametry předmětů z úkolu 2 změřte mikroskopem, který je v úloze č. 6, č. 30 nebo č. 14. Porovnejte hodnoty vypočtené z Fourierova spektra s přímým měřením mikroskopem.
+\item Po dohodě s vyučujícím vyberte a kvalitativně ověřte některou z vlastností Fourierovy transformace, které jsou uvedeny v odd. 4.10.2 části I skript nebo na www.
+\item V rovině P1 umístěte vybraný předmět. Do roviny P2 vkládejte různé filtry a zkoumejte jejich vliv na geometrický obraz v rovině P3. Pozorované jevy vysvětlete.
+
+\end{enumerate}
+
+%Teoretická část
+\input{teorie.tex}
+
+%Výsledky měření
+\input{vysledky.tex}
+
+%Diskuze výsledků
+\input{diskuze.tex}
+
+%Závěr
+\input{zaver.tex}
+
+
+\printbibliography[title={Seznam použité literatury}]
+
+\end{document}

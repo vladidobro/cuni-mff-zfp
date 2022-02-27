@@ -1,0 +1,89 @@
+\section*{Výsledky měření}
+Měření proběhlo při pokojové teplotě ($\approx \SI{22}{\degreeCelsius}$).
+
+Jako voltmetr jsme používali METEX M 3860 M a jako ampérmetr MASETECH MY65.
+Používáme síťové napětí s frekvencí \SI{50}{\hertz}.
+
+Odporová dekáda měla přesnost \SI{0.1}{\percent} a kondenzátorová dekáda \SI{1}{\percent}.
+
+Osciloskopem jsme změřili špičkové napětí na svorkách sekundárního vinutí transformátoru $U_0=\SI{9.3(3)}{\volt}$ a z něho podle \eqref{e:efektivni} vyplývá efektivní hodnota \SI{6.5(2)}{\volt}.
+Chybu odečtu na osciloskopu jsme odhadli na polovinu nejmenšího dílku.
+
+\subsection*{Jednocestný usměrňovač}
+
+Voltmetrem na střídavém rozsahu jsme změřili efektivní napětí \SI{6.66(9)}{\volt}.
+Hodnoty z obou přístrojů jsou tedy v dobré shodě.
+
+Měřili jsme jednocestný usměrňovač.
+Při hodnotě zatěžovacího odporu \SI{10}{\kilo\ohm} jsme proměřili závislost stejnosměrného napětí $U$ na filtrační kapacitě $C$, výsledky jsou v tabulce \ref{t:kapacita} a v grafu \ref{g:prvni}.
+Špičkovou hodnotu pulzního průběhu jsme odečetli na osciloskopu $U_0=\SI{8.5(1)}{\volt}$.
+
+\begin{graph}[htbp] 
+\centering
+\input{prvni.tex}
+\caption{Závislost stejnosměrného napětí $U$ na filtrační kapacitě $C$}
+\label{g:prvni}
+\end{graph}
+
+
+\begin{tabulka}[htbp]
+\centering
+\begin{tabular}{c|c}
+$C$ (\si{\micro\farad}) & $U$ (\si{\volt}) \\ \hline
+0 & \num{2.69(1)} \\
+\num{0.3} & \num{3.26(1)} \\
+\num{0.5} & \num{3.87(2)} \\
+\num{0.7} & \num{4.42(3)} \\
+1 & \num{5.05(3)} \\
+2 & \num{6.21(3)} \\
+3 & \num{6.77(4)} \\
+4 & \num{7.06(4)} \\
+5 & \num{7.26(4)} \\
+6 & \num{7.42(4)} \\
+7 & \num{7.52(4)} \\
+8 & \num{7.62(4)} \\
+9 & \num{7.72(4)} \\
+10 & \num{7.78(4)} \\
+\end{tabular}
+\caption{Závislost stejnosměrného napětí $U$ na filtrační kapacitě $C$}
+\label{t:kapacita}
+\end{tabulka}
+
+
+Změřili jsme závislost filtrační kapacity $C$ potřebné k tomu, aby střídavá složka napětí tvořila \SI{1}{\volt} na odebíraném proudu $I_{SS}$.
+Výsledky jsou v tabulce \ref{t:desetprocent} a grafu \ref{g:druhy}.
+U kapacit uvádíme poslední číslici v řádu, ve kterém jsme ještě pozorovali rozdíl na osciloskopu, proto uvažujeme chybu $C$ približně \SI{1}{\percent}, od toho se odvíjí i chyba $\tau$.
+
+\begin{graph}[htbp] 
+\centering
+\input{druhy.tex}
+\caption{Závislost filtrační kapacity $C$ potřebné k tomu, aby střídavá složka napětí tvořila \SI{1}{\volt} špičkové hodnoty, na odebíraném proudu $I_{SS}$}
+\label{g:druhy}
+\end{graph}
+
+\begin{tabulka}[htbp]
+\centering
+\begin{tabular}{c|c|c|c}
+$I_{SS}$ (\si{\milli\ampere}) & $R_Z$ (\si{\kilo\ohm}) & $C$ (\si{\micro\farad}) & $\tau$ (\SI{e-2}{\second}) \\ \hline
+
+\num{0.10} & \num{81.7} & \num{1.7} & \num{13.9(2)} \\
+\num{0.20} & \num{40.7} & \num{3.5} & \num{14.2(2)} \\
+\num{0.30} & \num{26.9} & \num{5.1} & \num{13.7(2)} \\
+\num{0.40} & \num{20.1} & \num{6.9} & \num{13.9(2)} \\
+\num{0.50} & \num{16.0} & \num{8.4} & \num{13.4(2)} \\
+\num{0.60} & \num{13.2} & \num{10.2} & \num{13.5(2)} \\
+\end{tabular}
+\caption{Závislost filtrační kapacity $C$ potřebné k tomu, aby střídavá složka napětí tvořila \SI{1}{\volt} špičkové hodnoty, na odebíraném proudu $I_{SS}$}
+\label{t:desetprocent}
+\end{tabulka}
+
+Statisticky zpracujeme hodnoty $\tau$ v tabulce \ref{t:desetprocent} a dostáváme $\tau =\SI{0.137(4)}{\second}$.
+
+\subsection*{Charakteristiky diod}
+
+Na osciloskopu jsme zobrazili V-A charakteristiku vakuové diody \textbf{EZ81} a Zenerovy diody \textbf{KZ703}.
+Charakteristiky jsou načtrtnuty v přiloženém záznamu z měření.
+Napětí na vakuové diodě při proudu \SI{20}{\milli\ampere} jsme odhadli \SI{6.4(3)}{\volt}.
+Na Zenerově diodě jsme ho odhadli \SI{0.64(4)}{\volt}.
+U Zenerovy diody jsme napětí odhadovali při jiném měřítku, než ve kterém je načtrnut výstup osciloskopu.
+Odhadli jsme Zenerovo napětí \SI{6.8(1)}{\volt}.

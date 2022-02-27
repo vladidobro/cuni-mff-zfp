@@ -1,0 +1,73 @@
+\documentclass[a4paper]{article}
+
+\usepackage[czech]{babel} %https://github.com/michal-h21/biblatex-iso690
+\usepackage[
+   backend=biber      % if we want unicode 
+  ,style=iso-numeric % or iso-numeric for numeric citation method          
+  ,babel=other        % to support multiple languages in bibliography
+  ,sortlocale=cs_CZ   % locale of main language, it is for sorting
+  ,bibencoding=UTF8   % this is necessary only if bibliography file is in different encoding than main document
+]{biblatex}
+
+\usepackage[utf8]{inputenc}
+\usepackage{fancyhdr}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage[left=3.5cm,right=3.5cm,top=4cm,bottom=4cm]{geometry}
+\usepackage{graphicx}
+\usepackage{pdfpages}
+\usepackage{url}
+\usepackage{import}
+
+\usepackage{siunitx}
+\sisetup{locale = DE, separate-uncertainty = true} %    kdybych chtel +/-
+
+\usepackage{float}
+\newfloat{graph}{htbp}{grp}
+\floatname{graph}{Graf}
+\newfloat{tabulka}{htbp}{tbl}
+\floatname{tabulka}{Tabulka}
+
+\renewcommand{\thefootnote}{\roman{footnote}}
+
+\pagestyle{fancy}
+\lhead{Praktikum IV - (A5) Spektrometrie záření alfa}
+\rhead{Vladislav Wohlrath}
+\author{Vladislav Wohlrath}
+
+\bibliography{source}
+
+\newcommand{\Am}{$^{241}$Am}
+\newcommand{\Puosm}{$^{238}$Pu}
+\newcommand{\Pudev}{$^{239}$Pu}
+\begin{document}
+
+\begin{titlepage}
+\includepdf[pages={1}]{./graficos/titlelist.pdf}
+\end{titlepage}
+
+\section*{Pracovní úkoly}
+\begin{enumerate}
+\item Proveďte energetickou kalibraci $\alpha$-spektrometru a určete jeho rozlišení.
+\item Určete absolutní aktivitu kalibračního radioizotopu \Am.
+\item Změřte závislost ionizačních ztrát $\alpha$-částic na tlaku vzduchu $\Delta T=\Delta T(P)$.
+\item Určete specifické ionizační ztráty $\alpha$-částic ve vzduchu při normálním tlaku $-\frac{dT}{dx} = f(T)$. Srovnejte tuto závislost se závislostí získanou pomocí empirické formule pro dolet $\alpha$-částic ve vzduchu za normálních podmínek.
+\item Určete energie $\alpha$-částic vyletujících ze vzorku obsahujícím izotop \Pudev~a příměs izotopu \Puosm~a porovnejte je s tabelovanými hodnotami. Stanovte relativní zastoupení izotopu \Puosm~ve vzorku s přesností lepší než \SI{10}{\percent}, jsou-li $T_{1/2}(^{238}\text{Pu}) = \SI{87.71}{yr}$ a $T_{1/2}(^{239}\text{Pu}) = \SI{24.13e3}{yr}$.
+\end{enumerate}
+
+%Teoretická část
+\input{teorie.tex}
+
+%Výsledky měření
+\input{vysledky.tex}
+
+%Diskuze výsledků
+\input{diskuze.tex}
+
+%Závěr
+\input{zaver.tex}
+
+
+\printbibliography[title={Seznam použité literatury}]
+
+\end{document}

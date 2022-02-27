@@ -1,0 +1,115 @@
+\section*{Výsledky měření}
+Měření proběhlo při pokojové teplotě ($\approx \SI{22}{\degreeCelsius}$).
+Všechny uvedené odchylky jsou standardní.
+
+\subsection*{Tlumené kmity}
+
+Změřili jsme dobu kmitu $T$ při $R=\SI{20}{\ohm}$ v závislosti na $C$.
+Výsledky jsou uvedeny v tabulce \ref{t:per} a grafu \ref{g:per}.
+Měřili jsme vždy dobu 5--7 kmitů a měření jsme provedli vícekrát, vzhledem k obdrženým výsledkům odhadujeme chybu měření periody na přibližně \SI{0.5}{\percent}.
+Pro každou kapacitu uvádíme též indukčnost počítanou ze vzorce \eqref{e:Lper}.
+Chybu odporové a kapacitní dekády zanedbáváme a metodou přenosu chyb jsme určili chybu indukčnosti \SI{1}{\percent}.
+
+\begin{tabulka}[htbp]
+\centering
+\begin{tabular}{c|c|c}
+$C$ (\si{\micro\farad}) & $T$ (\si{\milli\second}) & $L$ (\si{\henry}) \\ \hline
+\num{0.1} & \num{1.36(1)} & \num{0.469(5)} \\
+\num{0.4} & \num{2.82(2)} & \num{0.504(6)} \\
+\num{1} & \num{4.34(3)} & \num{0.478(5)} \\
+\num{3.2} & \num{8.26(5)} & \num{0.540(6)} \\
+\num{10} & \num{15.2(1)} & \num{0.587(6)} \\
+\end{tabular}
+\caption{Doba kmitu v periodickém stavu v závislosti na $C$ pro $R=\SI{20}{\ohm}$}
+\label{t:per}
+\end{tabulka}
+
+\begin{graph}[htbp] 
+\centering
+\input{per.tex}
+\caption{Doba kmitu v periodickém stavu v závislosti na $C$ pro $R=\SI{20}{\ohm}$}
+\label{g:per}
+\end{graph}
+
+Hodnoty $L$ v tabulce \ref{t:per} jsme statisticky zpracovali a dostáváme indukčnost cívky $L_1=\SI{0.52(5)}{\henry}$.
+
+
+\subsection*{Aperiodizační odpor}
+
+Měřili jsme aperiodizační odpor $R_{ap}$ v závislosti na kapacitě $C$.
+Chybu aperiodizačního odporu jsme odhadovali tak, abychom pokryli interval, ve kterém jsme nedokázali rozlišit, jestli je průběh proudu periodický či aperiodický.
+Uvádíme též hodnotu indukčnosti $L$ vypočtené pro každé měření podle \eqref{e:Laper}.
+Odchylku indukčnosti určujeme metodou přenosu chyb jako dvojnásobek relativní chyby aperiodizačního odporu.
+Výsledky jsou v tabulce \ref{t:aper} a v grafu \ref{g:aper}.
+
+
+\begin{tabulka}[htbp]
+\centering
+\begin{tabular}{c|c|c}
+$C$ (\si{\micro\farad}) & $R_{ap}$ (\si{\ohm}) & $L$ (\si{\henry}) \\ \hline
+\num{1} & \num{1150(30)} & \num{0.33(2)} \\
+\num{3} & \num{665(10)} & \num{0.33(1)} \\
+\num{6} & \num{480(10)} & \num{0.35(2)} \\
+\num{8} & \num{430(10)} & \num{0.37(2)} \\
+\num{10} & \num{370(10)} & \num{0.34(2)} \\
+\end{tabular}
+\caption{Aperiodizační odpor $R_{ap}$ v závislosti na $C$}
+\label{t:aper}
+\end{tabulka}
+
+\begin{graph}[htbp] 
+\centering
+\input{aper.tex}
+\caption{Aperiodizační odpor $R_{ap}$ v závislosti na $C$}
+\label{g:aper}
+\end{graph}
+
+Hodnoty $L$ v tabulce \ref{t:aper} jsme statisticky zpracovali a dostáváme indukčnost cívky $L_2=\SI{0.34(2)}{\henry}$.
+
+\subsection*{RC obvod}
+
+Měřili jsme závislost relaxační doby seriového RC obvodu v závislosti na odporu $R$ a kapacitě $C$.
+Změřili jsme několik kapacit pro $R=\SI{1}{\kilo\ohm}$ a pro několik odporů pro $C=\SI{1}{\micro\farad}$.
+Programem ISES jsme závislost odporu na čase proložili funkcí ve tvaru $a\cdot\exp(bt)$.
+Porovnáním s definičním vztahem relaxační doby získáváme
+\begin{equation}
+\tau=\frac{-1}{b} \,.
+\end{equation}
+
+Výsledky jsou v tabulce \ref{t:RC} a v grafech \ref{g:RCr} a \ref{g:RCc}.
+Uvádíme jen hodnoty $\tau$, přímo hodnoty $b$ neuvádíme, případně jsou k nahlédnutí v záznamu z měření.
+Kromě změřené hodnoty $\tau$ uvádíme také teoretickou hodnotu $\tau_t$ podle \eqref{e:tau}.
+
+\begin{tabulka}[htbp]
+\centering
+\begin{tabular}{c|c|c|c}
+$C$ (\si{\micro\farad}) & $R$ (\si{\kilo\ohm}) & $\tau$ (\si{\milli\second}) & $\tau_t$ (\si{\milli\second}) \\ \hline
+\num{1} & \num{50} & \num{49.2} & \num{50} \\
+\num{1} & \num{10} & \num{10.0} & \num{10} \\
+\num{1} & \num{4} & \num{3.97} & \num{4} \\
+\num{1} & \num{2} & \num{1.96} & \num{2} \\
+\num{1} & \num{0.5} & \num{0.514} & \num{0.5} \\
+\num{1} & \num{1} & \num{0.962} & \num{1} \\
+\num{0.5} & \num{1} & \num{0.523} & \num{0.5} \\
+\num{2} & \num{1} & \num{1.92} & \num{2} \\
+\num{4} & \num{1} & \num{3.82} & \num{4} \\
+\num{6} & \num{1} & \num{5.77} & \num{6} \\
+\num{10} & \num{1} & \num{9.60} & \num{10} \\
+\end{tabular}
+\caption{Závislost relaxační doby $\tau$ na $R$ a $C$}
+\label{t:RC}
+\end{tabulka}
+
+\begin{graph}[htbp] 
+\centering
+\input{RCr.tex}
+\caption{Závislost relaxační doby $\tau$ na $C$ pro $R=\SI{1}{\kilo\ohm}$ (pro přehlednost logaritmické měřítko)}
+\label{g:RCr}
+\end{graph}
+
+\begin{graph}[htbp] 
+\centering
+\input{RCc.tex}
+\caption{Závislost relaxační doby $\tau$ na $R$ pro $C=\SI{1}{\micro\farad}$ (pro přehlednost logaritmické měřítko)}
+\label{g:RCc}
+\end{graph}

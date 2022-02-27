@@ -1,0 +1,54 @@
+\section*{Výsledky měření}
+Průměr svazku v různých vzdálenostech měřený oběma metodami je uveden v tabulce \ref{t:div}.
+Jako $D_1$ jsme vzali v obou případech hodnotu pro $s=\SI{5}{\cm}$.
+Pro výpočet divergence jsme se rozhodli použít jako $D_2$ pouze hodnotu s největší vzdáleností $s$, protože ostatní hodnoty jsou zatíženy vysokou chybou. Při měření měřičem profilu svazku uvádíme hodnoty \emph{beam width clip}.
+
+\begin{tabulka}[htbp]
+\centering
+\begin{tabular}{cc|cc}
+\multicolumn{2}{c|}{ručně} & \multicolumn{2}{c}{měřič profilu} \\
+$s$ (\si{\cm}) & $D$ (\si{\mm}) & $s$ (\si{\cm}) & $D$ (\si{\mm}) \\ \hline
+5 & \num{1.0(2)} & 5 & \num{0.65(3)} \\
+18 & \num{1.0(2)} & 28 & \num{0.70(2)} \\
+66 & \num{1.5(2)} & 64 & \num{0.99(3)} \\
+155 & \num{2.5(4)} & 154 & \num{2.07(10)} \\
+251 & \num{4.0(5)} & 250 & \num{3.39(10)} \\ \hline
+\multicolumn{2}{c|}{$d=\num{0.0012(4)}$} & \multicolumn{2}{c}{$d=\num{0.0011(1)}$} \\
+\multicolumn{2}{c|}{$d_{min}=\num{0.0013(3)}$} & \multicolumn{2}{c}{$d_{min}=\num{0.0019(1)}$} \\
+\end{tabular}
+\caption{Měření průměru svazku}
+\label{t:div}
+\end{tabulka}
+
+
+Změřili jsme průměr svazku po průchodu Galileovým teleskopem (jen ručně na milimetrovém papíru)
+\begin{equation*}
+D_G=\SI{9.0(5)}{\mm} \,,
+\end{equation*}
+to znamená, že rozšíření svazku je \num{9(2)}. To se shoduje s výpočtem ze známých ohniskových délek \eqref{e:rozsireni}.
+Svazek byl rovnoběžný, v celé pozorované oblasti jsme nepozorovali měřitelnou změnu průměru svazku.
+
+
+
+\subsection*{Michelsonův interferometr}
+Sestavili jsme Michelsonův interferometr. Laserový svazek jsme děličem svazku rozdělili na dva a oba jsme zrcadlem odrazili zpět do děliče svazku. Výsledné svazky spolu v prostoru za děličem interferovali a my jsme je promítli na stínítko.
+
+
+Interferující svazky nebudou přesně rovnoběžné, ale budou mírně sbíhavé. Při interferenci sbíhavých svazků, které svírají úhel $\alpha$, vzniknou podle \cite{skripta} na stínítku interferenční plošky s rozestupem
+\begin{equation}
+\Delta x=\frac{\lambda}{2 \sin(\alpha/2)} \,.
+\end{equation}
+Experiment tomu kvalitativně odpovídal.
+
+
+Při naklánění zrcadla Z4 měníme úhel mezi svazky a jejich společnou rovinu, takže se mění rozestup proužků a jejich směr.
+
+
+Při posunu zrcadla Z3 měníme optickou dráhu jednoho ze svazků.
+To podle \cite{skripta} odpovídá posunu proužků ve směru na ně kolmém.
+
+
+Při vložení skla před dělič svazku nebo před stínítko změníme optickou dráhu obou svazků totožně a na interferenčním obrazci se to nijak neprojeví. Pokud sklo vložíme mezi dělič svazku a jedno ze zrcadel Z3 nebo Z4, změníme optickou dráhu příslušného svazku, zatímco optická dráha druhého interferujícího svazku zůstane nezměněna. V tom případě nastane případ podobný posouvání zrcadla Z3, při vložení zrcadla se proužky posunou. Následným nakláněním zrcadla můžeme dodatečně měnít optickou dráhu svazku (a posouvat proužky). Pokud je sklo nějakým způsobem nehomogenní nebo je jeho povrch nerovný, proužky se mírně zakřiví. Také dochází k rozptylu a interferenční proužky jsou nepatrně rozostřené.
+
+
+Při zahřívání vzduchu v místě průchodu svazku mezi děličem svazku a jedním ze zrcadel Z3 nebo Z4 dochází ke zkřivení interferenčních proužků a jejich kolísání v důsledku časově i prostorově proměnlivého indexu lomu vzduchu v ohřívaném místě.

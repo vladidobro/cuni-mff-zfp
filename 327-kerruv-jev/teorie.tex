@@ -1,0 +1,31 @@
+\section*{Teoretická část}
+Pokud PLZT vzorek vložíme do elektrostatického pole, stane se dvojlomným.
+Pokud na vzorek budeme působit elektrickým polem o intenzitě $E$ a délku vzorku (vzdálenost, kterou v ní urazí světlo) označíme $l$, bude fázový posuv mezi oběma složkami vlny \cite{zfp}
+\begin{equation}
+\Delta = 2\pi \cdot K \cdot l \cdot E^2 \,,
+\end{equation}
+kde $K$ je Kerrova konstanta vzorku.
+
+Elektrickou intenzitu můžeme vyjádřit pomocí přiloženého napětí $U$ a vzdálenosti elektrod $d$
+\begin{equation}
+E=\frac{U}{d} \,.
+\end{equation}
+
+Experiment uspořádáme podle návodu v \cite{zfp}. Polarizátory zkřížíme a vzorek umístíme tak, aby směr elektrického pole svíral s rovinou polarizace dopadajícího světla úhel \SI{45}{\degree}. Pro intenzitu světla za analyzátorem pak platí \cite{zfp}
+\begin{equation}
+I=I_0 \sin^2 \frac{\Delta}{2} \,,
+\end{equation}
+kde $I_0$ je intenzita v případě, že na vzorek přiložíme nulové napětí a směry průchodu světla polarizátorem a analyzátorem jsou shodné.
+
+Dosazením za $\Delta$ dostáváme
+\begin{equation}
+I=I_0 \sin^2 \frac{\pi \cdot K \cdot  l \cdot E^2}{d^2}
+\end{equation}
+a po úpravě
+\begin{equation} \label{e:fit}
+\arcsin \sqrt{\frac{I}{I_0}} = K \cdot \frac{\pi l}{d^2} U^2 \,.
+\end{equation}
+
+Ze směrnice této závislosti určíme Kerrovu konstantu.
+
+V případě $\Delta = \pi$, tedy rozdíl v optických drahách je roven $\lambda/2$, se vzorek chová jako půlvlnná destička a vycházející vlna je lineárně polarizovaná v rovině kolmé na původní rovinu polarizace, tedy ve směru snadného průchodu analyzátorem. V takovém případě naměříme maximum intenzity a hodnotu přiloženého napětí nazýváme půlvlnné napětí.

@@ -1,0 +1,39 @@
+\section*{Výsledky měření}
+
+Provedli jsme kalibraci "optické sondy anemometru" oběma metodami.
+Změřili jsme vzdálenost mezi 10 interferenčními proužky (10 mezer) \SI{0.28(2)}{\mm}, chybu odhadujeme s přihlédnutím k přesnosti mikrometru a metody. Změřili jsme $d_g = \SI{2.50(5)}{\cm}$ a $l_g = \SI{116(1)}{\cm}$. Dostali jsme vzdálenost interferenčních ploch
+
+
+\begin{align*}
+\begin{split}
+\text{měřením interferenčních proužků} & \qquad d_{F_i} = \SI{28(2)}{\micro\m} \\
+\text{z geometrie uspořádání} & \qquad d_{F_g} = \SI{29.4(10)}{\micro\m}
+\end{split}
+\end{align*}
+
+Protože se oba výsledky dobře shodují, budeme dále používat jejich průměr vážený chybou $d_F = \SI{29(1)}{\micro\m}$.
+
+Změřili jsme celkem 61 částic, naměřené hodnoty jsou v tabulce v příloze. Histogram rychlostí částic je v grafu \ref{g:hist}.
+Histogram jsme v programu GNUPLOT fitovali funkcí normálního rozdělení
+\begin{equation*}
+f(v_x)=A \cdot \exp{\left(-\frac{(v_x-\mu)^2}{2\sigma^2}\right)} \,.
+\end{equation*}
+Výsledné parametry jsou
+\begin{align*}
+\mu &= \SI{21.1(11)}{\mm\per\s}\\
+\sigma &= \SI{9.3(12)}{\mm\per\s}
+\end{align*}
+
+\begin{graph}[htbp] 
+\centering
+\input{hist.tex}
+\caption{Histogram rychlostí částic}
+\label{g:hist}
+\end{graph}
+
+\begin{graph}[htbp] 
+\centering
+\input{typ.tex}
+\caption{Pozorovaný diferenciální dopplerovský signál}
+\label{g:typ}
+\end{graph}

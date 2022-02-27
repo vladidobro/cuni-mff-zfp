@@ -1,0 +1,70 @@
+\section*{Výsledky měření}
+
+Pokud není uvedeno jinak, uvedené odchylky jsou standardní a odchylku nepřímo měřených veličin určujeme metodou přenosu chyby.
+Používáme zápis $x=\SI{10(1)}{\cm}$, kde číslo v závorce vyjadřuje odchylku v řádu poslední uvedené číslice, tedy $x=\SI[separate-uncertainty=true]{10(1)}{\cm}$.
+
+
+Pokus probíhal při normálním tlaku a pokojové teplotě ($t\approx\SI{22}{\degreeCelsius}$).
+
+Měření jsme provedli se dvěma kruhovými cívkami, které budeme důsledně nazývat větší ($d=2r=\SI{40.5(5)}{\cm}$) a menší ($d=\SI{20.0(2)}{\cm}$).
+Obě cívky měly 10 závitů a umožňovaly zapojení, ve kterém tekl proud jen 5 závity.
+Měřili jsme tyčový magnet označený jako MAGNET2.
+
+Na magnet jsme připevnili malé zrcadlo a zamířili jsme na něj laserový paprsek.
+Do vzdálenosti $L=\SI{1.14(1)}{\m}$ od magnetu jsme umístili stínítko tak, aby na něj v rovnovážné poloze s nulovým proudem cívkou paprsek dopadal kolmo.
+
+Pro obě cívky jsme měnili proud v rozmezí 0--\SI{4}{\ampere} a měřili výchylku místa dopadu laseru na stínítko. Proud jsme měřili vnějším ampérmetrem.
+Pokud se vychýlil o $\Delta l$, úhel otočení magnetu určíme jako
+\begin{equation}
+\alpha = \frac{1}{2} \arctan \frac{\Delta l}{L} \,.
+\end{equation}
+
+Přímo hodnoty $\Delta l$ neuvádíme, naměřené úhly jsou uvedeny v tabulce \ref{tab:tabmain} a zaneseny do grafu \ref{graf:grafmain}
+
+
+\begin{tabulka}[htbp]
+\centering
+\begin{tabular}{c|c|c|c|c}
+
+ & \multicolumn{2}{c|}{menší cívka} & \multicolumn{2}{c}{větší cívka} \\
+  & \multicolumn{2}{c|}{$r = \SI{10(1)}{\cm} $} & \multicolumn{2}{c}{$r= \SI{20.3(3)}{\cm} $} \\
+  
+  & $N=5$ & $N=10$ & $N=5$ & $N=10$ \\ \hline
+  
+$I$ (\si{\ampere}) & $\alpha$(\si{\degree}) & $\alpha$(\si{\degree}) & $\alpha$(\si{\degree}) & $\alpha$(\si{\degree}) \\
+\hline
+
+\num{0.5} & \num{0.40} & \num{0.80} & \num{0.23} & \num{0.45} \\
+\num{1.0} & \num{0.80} & \num{1.63} & \num{0.43} & \num{0.85} \\
+\num{1.5} & --- & \num{2.43} & --- & --- \\
+\num{2.0} & \num{1.63} & \num{3.23} & \num{0.83} & \num{1.68} \\
+\num{2.5} & --- & \num{4.04} & --- & --- \\
+\num{3.0} & \num{2.43} & \num{4.83} & \num{1.26} & \num{2.48} \\
+\num{3.5} & --- & \num{5.61} & --- & --- \\
+\num{4.0} & \num{3.23} & \num{6.38} & \num{1.68} & \num{3.30} \\
+
+\end{tabular}
+\caption{Naměřená závislost úhlu otočení magnetu na volbě cívky a proudu jí protékajícím}
+\label{tab:tabmain}
+\end{tabulka}
+
+\begin{graph}[htbp] 
+\centering
+\input{graf.tex}
+\caption{Naměřená závislost úhlu otočení magnetu na volbě cívky a proudu jí protékající, teoretická závislost \eqref{eq:vzorecalfa} s nafitovaným magnetickým momentem $p$}
+\label{graf:grafmain}
+\end{graph}
+
+
+Pro změření direkčního momentu vlákna jsme na něj zavěsili mosaznou tyč o délce $l_t=\SI{24.0(1)}{\cm}$, hmotnosti $m_t=\SI{56.6}{\g}$ a průměru $d_t=\SI{6}{\mm}$.
+Moment setrvačnosti takové tyče vzhledem k ose procházející průměrem v~jejím středu je podle \cite{momentset}
+\begin{equation} \label{eq:momentsetrvacnosti}
+J=m(d_t^2+\frac{1}{12} l_t^2)= \SI{2.74e-4}{\kg\m\squared} \,.
+\end{equation}
+Změřili jsme dobu 20 kmitů \SI{80.5}{\s}, tedy perioda $T=\SI{4.03}{\s}$.
+Direkční moment vlákna jsme určili podle \eqref{eq:periodadirekcnimoment} $D=\num{6.6(2)}\cdot \SI{e-4}{\newton\metre\per\radian}$. Odchylku jsme odhadli na \SI{3}{\percent}.
+
+Naměřenou závislost \eqref{eq:vzorecalfa} jsme nafitovali Coulombovým magnetickým momentem $p = \num{3.8(2)} \cdot \SI{e-7}{\weber \meter}$.
+Vzhledem k nepřesnostem při měření jsme odchylku odhadli na \SI{5}{\percent}.
+Ampérův magnetický moment vypočítáme podle \eqref{eq:amper} jako $m = \SI{0.30(2)}{\ampere\metre\squared}$.
+Teoretickou závislost \eqref{eq:vzorecalfa} jsme zanesli do grafu \ref{graf:grafmain} pro porovnání s naměřenými veličinami.

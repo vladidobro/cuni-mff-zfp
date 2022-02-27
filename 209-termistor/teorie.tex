@@ -1,0 +1,50 @@
+\section*{Teoretická část}
+Budeme měřit elektrickou součástku termistor.
+U většiny termistorů se se zvyšující se teplotou snižuje elektrický odpor.
+Elektrický odpor $R$ při teplotě $T$ můžeme vyjádřit vztahem \cite{skripta}
+\begin{equation} \label{e:zavislostodporu}
+R(T)=R_{\infty} \exp \left( \frac{B}{T} \right) \,,
+\end{equation}
+kde $R_{\infty}$ a $B$ jsou konstanty.
+
+Pro kovalentní vodiče, v nichž s teplotou roste koncentrace nositelů náboje, platí \cite{skripta}
+\begin{equation} \label{e:aktivacni}
+B=\frac{\Delta U}{2k} \,,
+\end{equation}
+kde $k=\SI{0.8617e-4}{\electronvolt\per\kelvin}=\SI{1.38e-24}{\joule\per\kelvin}$ je Boltzmannova konstanta a $\Delta U$ je aktivační energie.
+Vynásobením Avogadrovou konstantou $N_A = \SI{6.022e23}{\per\mole}$ dostaneme aktivační energii na jeden mol $\Delta U_{mol}$ a vztah se redukuje na
+\begin{equation} \label{e:Unamol}
+\Delta U_{mol} = 2BR \,,
+\end{equation}
+kde $R = \SI{8.314}{\joule\per\mole\per\kelvin}$ je molární plynová konstanta.
+
+Teplotní součinitel odporu $\alpha$ je definován \cite{skripta}
+\begin{equation}
+\alpha = \frac{1}{R(T)} \frac{dR(T)}{dT} \,.
+\end{equation}
+Po dosazení do \eqref{e:zavislostodporu} dostaneme
+\begin{equation} \label{e:soucinitel}
+\alpha = \frac{-B}{T^2} \,.
+\end{equation}
+
+Vyneseme-li závislost $\log R = f(1/T)$, dostaneme přímku popsanou rovnicí
+\begin{equation}
+\log R = log R_\infty + \num{0.434} \cdot B \frac{1}{T} \,.
+\end{equation}
+Pomocí lineární interpolace určíme konstantu $B$ a extrapolarizací pro $1/T \to 0$ určíme $R_\infty$.
+
+Dále měříme statickou charakteristiku termistoru.
+Teplota termistoru se ustálí na teplotě, kdy se vyrovná elektrický příkon a tepelný výkon odváděný do okolí \cite{skripta}
+\begin{equation}
+KP=T-T_0 \,,
+\end{equation}
+kde $K$ je tepelný odpor termistoru a $T_0$ je teplota okolí.
+Nejvyšší napětí $U_m$ na termistoru bude při proudu $I_m$ a teplotě \cite{skripta}
+\begin{equation} \label{e:Tm}
+T_m = \frac{1}{2} \left[ B - \sqrt{B(B-4T_0)}       \right] \,.
+\end{equation}
+
+Tepelný odpor $K$ určíme podle 
+\begin{equation} \label{e:tepodpor}
+K=\frac{T_m-T_0}{U_m I_m} \,.
+\end{equation}

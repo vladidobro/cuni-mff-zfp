@@ -1,0 +1,81 @@
+\section*{Výsledky měření}
+Vlnová délka použitého laseru je $\lambda=\SI{543}{\nm}$. Ohnisková vzdálenost čočky Č je $f=\SI{100}{\cm}$. Chybu těchto veličin zanedbáváme vzhledem k chybám vnesených vlastním měřením.
+
+Ohniskové vzdálenosti čoček jsou $f_{\text{Č1}}=\SI{-2.5}{\cm}$ a $f_{\text{Č2}}=\SI{15}{\cm}$, z toho vyplývá zvětšení teleskopu 7.
+Na milimetrovém papíru jsme změřili průměr svazku před teleskopem \SI{2.0(3)}{\mm} a za teleskopem \SI{12.0(5)}{\mm}. Průměr svazku jsme změřili ještě v několika místech mezi čočkami Č2 a Č a nikde jsme nenaměřili žádný rozdíl, teleskop tedy dostatečně zachovává rovnoběžnost paprsků. Rozšíření svazku vypočtené z průměrů svazku před a za teleskopem je \num{6(1)}, což se v rámci chyby shoduje s hodnotou vypočtenou z ohniskových vzdáleností.
+
+Na mikroskopu jsme změřili rozměry předmětů (tabulka \ref{t:mikr}).
+\begin{tabulka}[H]
+\centering
+\begin{tabular}{c||lr}
+\multirow{2}{*}{mřížka} & vzdálenost děr vodorovně & \SI{760(10)}{\micro\metre} \\
+& vzdálenost děr svisle & \SI{700(10)}{\micro\metre} \\ \hline
+
+\multirow{2}{*}{čtvereček} & šířka & $a=\SI{800(10)}{\micro\metre}$ \\
+& výška & $b=\SI{793(10)}{\micro\metre}$ \\ \hline
+
+\multirow{3}{*}{proužky} & vzdálenost proužků & $l=\SI{99(3)}{\micro\metre}$ \\
+& šířka proužků & \SI{22(2)}{\micro\metre} \\
+& šířka štěrbin\footnotemark & $d=\SI{77(4)}{\micro\metre}$ \\ \hline
+
+\multirow{3}{*}{síťka} & vzdálenost otvorů\footnotemark & $w=\SI{104.7(10)}{\micro\metre}$ \\
+& šířka vláken & \SI{50(4)}{\micro\metre} \\
+& strana čtvercových otvorů\footnotemark & $c=\SI{54(5)}{\micro\metre}$ \\
+\end{tabular}
+\caption{Mikroskopem naměřené rozměry předmětů}
+\label{t:mikr}
+\end{tabulka}
+\footnotetext[1]{Šířka štěrbin nebyla změřena mikroskopem přímo, určili jsme ji jako rozdíl vzdálenosti a šířky proužků.}
+\footnotetext[2]{V obou směrech se lišila až na prvním desetinném místě, síť byla tedy dobře čtvercová.}
+\footnotetext[3]{Stejně jako \footnotemark[1].}
+
+
+Ke změření zvětšení obrazu předmětu v rovině P3 jsme použili \emph{mřížku}. Na stínítku v rovině P3 jsme změřili vodorovnou vzdálenost děr \SI{3.04(8)}{\mm} a svislou \SI{2.89(8)}{\mm}. Pro větší přesnost jsme měřili vždy vzdálenost více děr. Z naměřených hodnot a tabulky \ref{t:mikr} vyplývá zvětšení ve vodorovném směru \num{4.01(10)} a svislém \num{4.15(10)}. Za skutečné zvětšení považujeme jejich střední hodnotu \num{4.08(10)}.
+
+
+
+
+
+
+Ke změření zvětšení obrazu Fourierova spektra v rovině P4 \emph{čtvereček} $\delta01$ (čtvercový otvor), pro který jsme změřili relativní polohy minim intenzity v rovinách P2 i P4. Hodnoty jsme kvůli určení zvětšení měřili přesněji ve vodorovném směru, ve svislém směru jsme měřili jen v rovině P2. Naměřené hodnoty jsou v grafu \ref{g:ctv}. Lineární regresí pro hodnoty v rovině P2 jsme dostali $\lambda f/a=\SI{0.736(5)}{\mm}$. V rovině P4 dostáváme $Y\lambda f/a=\SI{2.87(7)}{\mm}$, kde $Y$ je hledané zvětšení. Z toho dostáváme zvětšení v rovině P4 $Y=\num{3.9(1)}$. Zároveň dostáváme $a=\SI{737(5)}{\micro\meter}$ a $b=\SI{720(20)}{\micro\metre}$. 
+
+\begin{figure}[htbp]
+\centering
+\begin{subfigure}{.5\textwidth}
+  \centering
+  \input{ctv.tex}
+  \caption{vodorovný směr v P2}
+\end{subfigure}%
+\begin{subfigure}{.5\textwidth}
+  \centering
+  \input{ctvP2.tex}
+  \caption{vodorovný směr v P4}
+\end{subfigure}
+\\
+\begin{subfigure}{.5\textwidth}
+  \centering
+  \input{ctv2P4.tex}
+  \label{g:svislectv}
+  \caption{svislý směr v P4}
+\end{subfigure}
+\captionof{graph}{Relativní polohy minim intenzity ve Fourierově obrazu čtverečku}
+\label{g:ctv}
+\end{figure}
+
+
+Pozorovali jsme Fourierův obraz soustavy rovnoběžných \emph{proužků}. Změřili jsme relativní polohy maxim intenzity v rovině P2. Hodnoty jsou v tabulce \ref{t:pruhy}. Lineární regresí dostáváme vzdálenost štěrbin $l=\SI{92(3)}{\micro\metre}$. Difrakční minimum jsme nepozorovali ostře, ale odhadujeme, že nebylo blíže než \SI{2.5}{\cm}. Dostáváme proto dolní odhad pro šířku štěrbin $d>\SI{20}{\micro\metre}$.
+
+\input{floats.tex}
+
+
+Pozorovali jsme Fourierův obraz \emph{síťky}. 
+Obraz jsme měřili v rovině P2. Zde nám ohybová minima znemožnili pozorování některých maxim. Naměřené hodnoty jsou v tabulce \ref{t:sit}. Lineární regresí jsme určili vzdálenost děr $w=\SI{0}{\micro\metre}$ a velikost čtvercových otvorů $c=\SI{0}{\micro\metre}$ (uvádíme pouze jednu hodnotu, protože pro vodorovný a svislý směr vyšla totožná hodnota, což odpovídá tomu, že síťka je skutečně čtvercová, jak jsme ověřili i na mikroskopu).
+
+
+
+
+
+
+Ověřili jsme následující vlastnosti Fourierovy transformace z \cite{skripta}. Podobnostní teorém: při vkládání podobných předmětů se Fourierův obraz náležitě roztahoval. Posunovací teorém: při posunu předmětu ve směru kolmém na optickou osu se rozložení intenzity ve Fourierově rovině neměnilo. Dvojitá Fourierova transformace: v rovině P3 vznikal převrácený obraz předmětu. Transformace konvoluce: v předmětové rovině jsme umístili dva filtry (konkrétně např. trojúhelníkový otvor a síťku), čímž jsme efektivně provedli násobení těchto dvou funkcí. Ve Fourierově rovině jsme poté skutečně pozorovali konvoluci Fourierových obrazů obou předmětů.
+
+V rovině P2 jsme umísťovali prostorové filtry (např. horní a dolní propusť, síťku) a pozorovali obraz v rovině P3. Provedli jsme např. "osvobození tygra z klece". Všechny pozorované obrazy byly v souladu s teorií.

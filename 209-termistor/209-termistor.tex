@@ -1,0 +1,68 @@
+\documentclass[a4paper]{article}
+
+\usepackage[czech]{babel} %https://github.com/michal-h21/biblatex-iso690
+\usepackage[
+   backend=biber      % if we want unicode 
+  ,style=iso-numeric % or iso-numeric for numeric citation method          
+  ,babel=other        % to support multiple languages in bibliography
+  ,sortlocale=cs_CZ   % locale of main language, it is for sorting
+  ,bibencoding=UTF8   % this is necessary only if bibliography file is in different encoding than main document
+]{biblatex}
+
+\usepackage[utf8]{inputenc}
+\usepackage{fancyhdr}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage[left=2cm,right=2cm,top=2.5cm,bottom=2.5cm]{geometry}
+\usepackage{graphicx}
+\usepackage{pdfpages}
+\usepackage{url}
+
+\usepackage{siunitx}
+\sisetup{locale = DE, separate-uncertainty = true} %    kdybych chtel +/-
+
+\usepackage{float}
+\newfloat{graph}{htbp}{grp}
+\floatname{graph}{Graf}
+\newfloat{tabulka}{htbp}{tbl}
+\floatname{tabulka}{Tabulka}
+
+\renewcommand{\thefootnote}{\roman{footnote}}
+
+\pagestyle{fancy}
+\lhead{Praktikum II - (9) Charakteristiky termistoru}
+\rhead{Vladislav Wohlrath}
+\author{Vladislav Wohlrath}
+
+\bibliography{source}
+
+\begin{document}
+
+\begin{titlepage}
+%\includepdf[pages={1}]{./graficos/209-tit.pdf}
+\end{titlepage}
+
+\section*{Pracovní úkoly}
+\begin{enumerate}
+\item Změřte statickou charakteristiku termistoru pro proudy do \SI{25}{\milli\ampere} a graficky ji znázorněte. V případě záznamu měření počítačem vytiskněte.
+\item Změřte teplotní závislost odporu termistoru v teplotním intervalu přibližně 180 až 360 K a graficky znázorněte (ev. vytiskněte).
+\item Graficky znázorněte závislost logaritmu odporu $R$ termistoru na $1/T$ a vyhodnoťte velikost materiálových veličin $R_{\infty}$ a $B$, aktivační energie $U$ a teplotního součinitele odporu $\alpha$ při pokojové teplotě.
+\item Stanovte teplotu termistoru v maximu charakteristiky, případně v některých dalších bodech a tepelný odpor K.
+\end{enumerate}
+
+%Teoretická část
+\input{teorie.tex}
+
+%Výsledky měření
+\input{vysledky.tex}
+
+%Diskuze výsledků
+\input{diskuze.tex}
+
+%Závěr
+\input{zaver.tex}
+
+
+\printbibliography[title={Seznam použité literatury}]
+
+\end{document}

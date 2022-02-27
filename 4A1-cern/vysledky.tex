@@ -1,0 +1,92 @@
+\section*{Výsledky měření}
+Zpracovali jsme 106 událostí, výsledné histogramy jsou označené klíčovým slovem \emph{mydata}, viz grafy \ref{o:m1}, \ref{o:m2}, \ref{o:m3}, \ref{o:m4}.
+
+Soubor jsme poté rozšířili na 1370 událostí z archivu událostí zpracovaných jinými studenty. Histogramy jsou označené klíčovým slovem \emph{alldata}, viz grafy \ref{o:a1}, \ref{o:a2}, \ref{o:a3}, \ref{o:a4}.
+
+Jasný peak okolo \SI{91}{\GeV\per $c^2$} odpovídá bosonu Z. Nasvědčuje tomu i to, že tento peak zmizí, pokud si zobrazíme pouze fotonové události.
+
+Naopak peak okolo \SI{125}{\GeV\per $c^2$}, který je zřetelný pouze u fotonových událostí, odpovídá bosonu H.
+
+Ve velmi nízkých energiích pozorujeme u dileptonových událostí další peak, který podle \cite{skripta} odpovídá částicím J/$\uppsi$ a $\Upsilon$.
+
+Další dva peaky jsou při energiích cca \SI{1000}{\GeV\per $c^2$} a \SI{1500}{\GeV\per $c^2$}, což by odpovídalo hypotetickým čísticím W', respektive g (graviton). Skutečně, do našeho soubory byly přimíchány simulované události právě s těmito částicemi.
+
+
+V grafu \ref{o:com} jsou histogramy všech událostí pro různě velké statistické soubory v okolí bosonu Z.
+Porovnáním parametrů fitovaných Gaussových funkcí zjišťujeme, že střední hodnota se téměř nemění, pouze se s rozšiřujícím souborem snižuje její nejistota. Se $\sigma$ je to podobné, pouze hodnota kolísá více. Do grafu \ref{o:chyby} jsme zanesli závislost nejistoty střední hodnoty na velikosti souboru.
+
+
+
+
+
+\begin{graph}[htbp]
+\centering
+\includegraphics[width=\textwidth-2cm]{graficos/mydataz/c1_n9.png}
+\caption{mydata --- všechny události}
+\label{o:m1}
+\end{graph}
+
+\begin{graph}[htbp]
+\centering
+\includegraphics[width=\textwidth-2cm]{graficos/mydataz/c1_n10.png}
+\caption{mydata --- elektron-pozitronové události}
+\label{o:m2}
+\end{graph}
+
+\begin{graph}[htbp]
+\centering
+\includegraphics[width=\textwidth-2cm]{graficos/mydataz/c1_n11.png}
+\caption{mydata --- mion-antimionové události}
+\label{o:m3}
+\end{graph}
+
+\begin{graph}[htbp]
+\centering
+\includegraphics[width=\textwidth-2cm]{graficos/mydataz/c1_n12.png}
+\caption{mydata --- dvou-fotonové události}
+\label{o:m4}
+\end{graph}
+
+\begin{graph}[htbp]
+\centering
+\includegraphics[width=\textwidth-2cm]{graficos/alldataz/c1.png}
+\caption{alldata --- všechny události}
+\label{o:a1}
+\end{graph}
+
+\begin{graph}[htbp]
+\centering
+\includegraphics[width=\textwidth-2cm]{graficos/alldataz/c1_n5.png}
+\caption{alldata --- elektron-pozitronové události}
+\label{o:a2}
+\end{graph}
+
+\begin{graph}[htbp]
+\centering
+\includegraphics[width=\textwidth-2cm]{graficos/alldataz/c1_n6.png}
+\caption{alldata --- mion-antimionové události}
+\label{o:a3}
+\end{graph}
+
+\begin{graph}[htbp]
+\centering
+\includegraphics[width=\textwidth-2cm]{graficos/alldataz/c1_n7.png}
+\caption{alldata --- dvou-fotonové události}
+\label{o:a4}
+\end{graph}
+
+
+\begin{graph}[htbp]
+\centering
+\includegraphics[width=\textwidth]{graficos/comparez/platno.png}
+\caption{Porovnání histogramů pro různě velké statistické soubory.}
+\label{o:com}
+\end{graph}
+
+
+\begin{graph}[htbp]
+\centering
+\input{datos/chyby}
+\caption{Závislost nejistoty určení střední hodnoty hmotnosti bosonu Z na počtu zpracovaných událostí.}
+\label{o:chyby}
+\end{graph}

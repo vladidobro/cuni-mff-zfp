@@ -1,0 +1,69 @@
+\documentclass[a4paper]{article}
+
+\usepackage[czech]{babel} %https://github.com/michal-h21/biblatex-iso690
+\usepackage[
+   backend=biber      % if we want unicode 
+  ,style=iso-numeric % or iso-numeric for numeric citation method          
+  ,babel=other        % to support multiple languages in bibliography
+  ,sortlocale=cs_CZ   % locale of main language, it is for sorting
+  ,bibencoding=UTF8   % this is necessary only if bibliography file is in different encoding than main document
+]{biblatex}
+
+\usepackage[utf8]{inputenc}
+\usepackage{fancyhdr}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage[left=2cm,right=2cm,top=2.5cm,bottom=2.5cm]{geometry}
+\usepackage{graphicx}
+\usepackage{pdfpages}
+\usepackage{url}
+
+\usepackage{siunitx}
+\sisetup{locale = DE  , separate-uncertainty = true} %    kdybych chtel +/-
+
+\usepackage{float}
+\newfloat{graph}{htbp}{grp}
+\floatname{graph}{Graf}
+\newfloat{tabulka}{htbp}{tbl}
+\floatname{tabulka}{Tabulka}
+
+\renewcommand{\thefootnote}{\roman{footnote}}
+
+\pagestyle{fancy}
+\lhead{Praktikum III - (18) Laserová dopplerovská anemometrie}
+\rhead{Vladislav Wohlrath}
+\author{Vladislav Wohlrath}
+
+\bibliography{source}
+
+\begin{document}
+
+\begin{titlepage}
+\includepdf[pages={1}]{./graficos/titlelist}
+\end{titlepage}
+
+\section*{Pracovní úkoly}
+\begin{enumerate}
+\item Proveďte kalibraci „optické sondy anemometru“. Použijte uspořádání navržené na obr. 4.6 – 5 v \cite{skripta}. Parametry optické sondy získáte jednak měřením vzdálenosti interferenčních plošek v průsečíku laserových paprsků metodou projekce, jednak výpočtem z geometrie uspořádání. Oba výsledky porovnejte.
+\item Připravte aparaturu k měření rychlosti částic. Zkontrolujte chod paprsků v detekční optice a vymezte prostorovou dírkovou clonu.
+\item Na základě průběhu dopplerovských signálů optimalizujte dopplerovský signál na proudění vody v kyvetě.
+\item Změřte frekvence dopplerovského signálu na souboru 60--80 částic. Převeďte hodnoty frekvence na hodnoty rychlostí. Graficky zpracujte rozložení rychlostí ve vodě formou histogramu. Histogram fitujte funkcí normálního rozdělení a z ní stanovte střední hodnotu rychlosti částic a standardní odchylku nalezeného rozdělení.
+\item Diskutujte, jaký vliv na výsledek má to, že parametry optické sondy jsou měřeny ve vzduchu, zatímco měření rychlostí částic probíhá ve vodě.
+\end{enumerate}
+
+%Teoretická část
+\input{teorie.tex}
+
+%Výsledky měření
+\input{vysledky.tex}
+
+%Diskuze výsledků
+\input{diskuze.tex}
+
+%Závěr
+\input{zaver.tex}
+
+
+\printbibliography[title={Seznam použité literatury}]
+
+\end{document}

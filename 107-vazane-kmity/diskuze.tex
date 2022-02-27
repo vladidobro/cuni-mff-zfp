@@ -1,0 +1,35 @@
+\section*{Diskuze}
+Teoretické hodnoty $\omega_3$ a $\omega_4$ podle vztahu \eqref{eq::omega34} jsou pro $l =$ \SI{27.8(1)}{cm}:
+\begin{itemize}
+\item \begin{tabbing} Pružina A: \= $\omega_3=\SI{3.52(3)}{\per\s}$	\\ \> $\omega_4=\SI{0.15(3)}{\per\s}$  \end{tabbing}
+\item \begin{tabbing} Pružina B: \= $\omega_3=\SI{3.44(3)}{\per\s}$	\\ \> $\omega_4=\SI{0.08(3)}{\per\s}$  \end{tabbing}
+\end{itemize}
+
+Všechny naměřené hodnoty se velmi přesně shodují s teoretickými, až na $\omega_3$ s pružinou A (naměřeno \SI{2.96(3)}{\per\s}), která se od teoretické výrazně liší.
+Vzhledem k tomu, že naměřené $\omega_4$ velmi přesně odpovídá naměřeným $\omega_1$ a $\omega_2$, je nejpravděpodobnější příčinou hrubá chyba při měření periody $T_3$ (pravděpodobně chybný odečet počtu měřených period).
+Nemůžeme ale vyloučit, že se o hrubou chybu nejedná a pohyb kyvadel našemu modelu neodpovídá.
+V každém případě je měření neprůkazné a mělo by se zopakovat.
+
+Pokud upevníme pružinu s tuhostí $k$ ve vzdálenosti $l$ od upevnění kyvadla, působí při malých výchylkách (tj.~$\sin (\varphi) \approx \varphi$) na kyvadlo silou
+\begin{equation}
+F=-k \cdot l \cdot \varphi
+\end{equation}
+a působí momentem síly $M = F \cdot l$
+\begin{equation}
+M = -k \cdot l^2 \cdot \varphi  \,.
+\end{equation}
+
+Porovnáním s definicí direkčního momentu
+\begin{equation}
+M = -D \cdot \varphi
+\end{equation}
+snadno nahlédneme, že pro direkční moment pružiny $D^{\ast}$ platí
+\begin{equation}
+D^{\ast} = -k \cdot l^2 \,.
+\end{equation}
+
+Dosazením do \eqref{eq::kappadirekcni} dostáváme pro slabé vazby a krátké vzdálenosti $l$ (tj.~$D^{\ast} \ll D$)
+\begin{equation}
+\kappa = a \cdot l^2 \,,
+\end{equation}
+kde $a = D^{\ast}/D$. Proto jsme v grafu \ref{grp::kappanal} fitovali závislost funkcí $\kappa(l)=a \cdot l^2$. Všechny hodnoty leží velmi přesně na této křivce.
